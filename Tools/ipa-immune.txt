@@ -1,0 +1,17 @@
+Canonical Pathways	nfc1	nfc2	Treg	proliferative
+T Cell Exhaustion Signaling Pathway	2.714	1.508	1.069	1.155
+Autophagy	1.265	1.265	2.714	1.897
+"PD-1, PD-L1 cancer immunotherapy pathway"	1.414	1.667	1	1.897
+S100 Family Signaling Pathway	1.877	1.095	1.567	0.174
+Immunogenic Cell Death Signaling Pathway	0	2	2.449	2.236
+TNFR2 Signaling	2	0	2	0
+STAT3 Pathway	2	0	-2	-1
+TGF-_ Signaling	2	1.342	0	0
+ID1 Signaling Pathway	1	0.577	-1.069	0.258
+PI3K/AKT Signaling	1.342	0.447	-0.447	-0.447
+TEC Kinase Signaling	1.155	-0.707	-0.707	-1.414
+Protein Kinase A Signaling	-0.894	-0.229	-0.728	-1.342
+T Cell Receptor Signaling	-0.728	-1.147	-1.886	-2.668
+CD28 Signaling in T Helper Cells	-0.632	-0.905	-0.302	-1.897
+ICOS-ICOSL Signaling in T Helper Cells	-0.707	-0.333	-0.302	0
+ERK/MAPK Signaling	-0.302	-2.121	-1.89	-2.121
