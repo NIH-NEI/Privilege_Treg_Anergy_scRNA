@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	MAF	MAF bZIP transcription factor [Source:HGNC Symbol;Acc:HGNC:6776]	4	3.50056791305542	0.12811884	Yes	
+row_1	HIP1	huntingtin interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:4913]	25	2.4461398124694824	0.21123128	Yes	
+row_2	FOXP3	forkhead box P3 [Source:HGNC Symbol;Acc:HGNC:6106]	66	1.8074678182601929	0.2632394	Yes	
+row_3	RORA	RAR related orphan receptor A [Source:HGNC Symbol;Acc:HGNC:10258]	72	1.7571446895599365	0.3264343	Yes	
+row_4	IL18R1	interleukin 18 receptor 1 [Source:HGNC Symbol;Acc:HGNC:5988]	91	1.5544133186340332	0.37727582	Yes	
+row_5	CXCR3	C-X-C motif chemokine receptor 3 [Source:HGNC Symbol;Acc:HGNC:4540]	135	1.3068740367889404	0.4096307	Yes	
+row_6	N4BP1	NEDD4 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:29850]	209	1.0773378610610962	0.42230117	Yes	
+row_7	RAC2	Rac family small GTPase 2 [Source:HGNC Symbol;Acc:HGNC:9802]	346	0.8450109362602234	0.4028797	No	
+row_8	MYO1G	myosin IG [Source:HGNC Symbol;Acc:HGNC:13880]	491	0.6744974255561829	0.37416202	No	
+row_9	TBCB	tubulin folding cofactor B [Source:HGNC Symbol;Acc:HGNC:1989]	522	0.6496937870979309	0.38703158	No	
+row_10	METRNL	meteorin like, glial cell differentiation regulator [Source:HGNC Symbol;Acc:HGNC:27584]	571	0.6094442009925842	0.39169946	No	
+row_11	F2R	coagulation factor II thrombin receptor [Source:HGNC Symbol;Acc:HGNC:3537]	603	0.5812698602676392	0.40166274	No	
+row_12	ACOT9	acyl-CoA thioesterase 9 [Source:HGNC Symbol;Acc:HGNC:17152]	613	0.5770629644393921	0.41967306	No	
+row_13	NABP1	nucleic acid binding protein 1 [Source:HGNC Symbol;Acc:HGNC:26232]	725	0.5021575689315796	0.3968787	No	
+row_14	HTATIP2	HIV-1 Tat interactive protein 2 [Source:HGNC Symbol;Acc:HGNC:16637]	873	0.42953380942344666	0.35797253	No	
+row_15	DNAJC15	DnaJ heat shock protein family (Hsp40) member C15 [Source:HGNC Symbol;Acc:HGNC:20325]	891	0.42619726061820984	0.36741415	No	
+row_16	TOX	thymocyte selection associated high mobility group box [Source:HGNC Symbol;Acc:HGNC:18988]	996	0.38155680894851685	0.34276447	No	
+row_17	SDC4	syndecan 4 [Source:HGNC Symbol;Acc:HGNC:10661]	1067	0.3572966456413269	0.32989362	No	
+row_18	OTULIN	OTU deubiquitinase with linear linkage specificity [Source:HGNC Symbol;Acc:HGNC:25118]	1075	0.354999303817749	0.34042764	No	
+row_19	PIN4	peptidylprolyl cis/trans isomerase, NIMA-interacting 4 [Source:HGNC Symbol;Acc:HGNC:8992]	1146	0.331291139125824	0.32659394	No	
+row_20	TNIP3	TNFAIP3 interacting protein 3 [Source:HGNC Symbol;Acc:HGNC:19315]	1173	0.3224380910396576	0.3288381	No	
+row_21	VAX2	ventral anterior homeobox 2 [Source:HGNC Symbol;Acc:HGNC:12661]	1219	0.3100375533103943	0.3235389	No	
+row_22	ACTN4	actinin alpha 4 [Source:HGNC Symbol;Acc:HGNC:166]	1418	0.2621631622314453	0.25942013	No	
+row_23	MFSD6	major facilitator superfamily domain containing 6 [Source:HGNC Symbol;Acc:HGNC:24711]	1605	-0.2752571105957031	0.20026042	No	
+row_24	UBR1	ubiquitin protein ligase E3 component n-recognin 1 [Source:HGNC Symbol;Acc:HGNC:16808]	1747	-0.30692026019096375	0.15905158	No	
+row_25	HSPA8	heat shock protein family A (Hsp70) member 8 [Source:HGNC Symbol;Acc:HGNC:5241]	1791	-0.3158954083919525	0.15471496	No	
+row_26	CASP8	caspase 8 [Source:HGNC Symbol;Acc:HGNC:1509]	1924	-0.35606709122657776	0.11868152	No	
+row_27	NTRK3	neurotrophic receptor tyrosine kinase 3 [Source:HGNC Symbol;Acc:HGNC:8033]	1990	-0.3824599087238312	0.108606644	No	
+row_28	TRIM14	tripartite motif containing 14 [Source:HGNC Symbol;Acc:HGNC:16283]	2167	-0.465910941362381	0.06023456	No	
+row_29	MAN1A2	mannosidase alpha class 1A member 2 [Source:HGNC Symbol;Acc:HGNC:6822]	2176	-0.4719548523426056	0.07472608	No	
+row_30	ABCG2	ATP binding cassette subfamily G member 2 (Junior blood group) [Source:HGNC Symbol;Acc:HGNC:74]	2368	-0.6021894216537476	0.025806934	No	
+row_31	SIPA1L1	signal induced proliferation associated 1 like 1 [Source:HGNC Symbol;Acc:HGNC:20284]	2473	-0.7426553964614868	0.014527089	No	
+row_32	IQGAP2	IQ motif containing GTPase activating protein 2 [Source:HGNC Symbol;Acc:HGNC:6111]	2557	-0.9029846787452698	0.017013496	No	
+row_33	SMC6	structural maintenance of chromosomes 6 [Source:HGNC Symbol;Acc:HGNC:20466]	2625	-1.1215219497680664	0.03355705	No	

@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	NR4A2	nuclear receptor subfamily 4 group A member 2 [Source:HGNC Symbol;Acc:HGNC:7981]	8	2.541466474533081	0.06743106	Yes	
+row_1	NR4A3	nuclear receptor subfamily 4 group A member 3 [Source:HGNC Symbol;Acc:HGNC:7982]	9	2.516301155090332	0.13774954	Yes	
+row_2	TNFSF11	TNF superfamily member 11 [Source:HGNC Symbol;Acc:HGNC:11926]	20	2.1598060131073	0.19361737	Yes	
+row_3	STX11	syntaxin 11 [Source:HGNC Symbol;Acc:HGNC:11429]	27	2.0089054107666016	0.24706359	Yes	
+row_4	GADD45B	growth arrest and DNA damage inducible beta [Source:HGNC Symbol;Acc:HGNC:4096]	39	1.7743109464645386	0.29170984	Yes	
+row_5	SRGN	serglycin [Source:HGNC Symbol;Acc:HGNC:9361]	47	1.6977617740631104	0.33601227	Yes	
+row_6	LAG3	lymphocyte activating 3 [Source:HGNC Symbol;Acc:HGNC:6476]	53	1.6585502624511719	0.38011658	Yes	
+row_7	FURIN	furin, paired basic amino acid cleaving enzyme [Source:HGNC Symbol;Acc:HGNC:8568]	57	1.6452919244766235	0.42474806	Yes	
+row_8	MMD	monocyte to macrophage differentiation associated [Source:HGNC Symbol;Acc:HGNC:7153]	70	1.466751217842102	0.4603507	Yes	
+row_9	MYO1E	myosin IE [Source:HGNC Symbol;Acc:HGNC:7599]	90	1.3424049615859985	0.4893366	Yes	
+row_10	TNFRSF4	TNF receptor superfamily member 4 [Source:HGNC Symbol;Acc:HGNC:11918]	128	1.1654411554336548	0.50529826	Yes	
+row_11	NFATC1	nuclear factor of activated T cells 1 [Source:HGNC Symbol;Acc:HGNC:7775]	178	0.9862093329429626	0.5108652	Yes	
+row_12	NDRG1	N-myc downstream regulated 1 [Source:HGNC Symbol;Acc:HGNC:7679]	211	0.8938356637954712	0.5214809	Yes	
+row_13	ANP32A	acidic nuclear phosphoprotein 32 family member A [Source:HGNC Symbol;Acc:HGNC:13233]	236	0.856011152267456	0.53463036	Yes	
+row_14	PFKP	phosphofructokinase, platelet [Source:HGNC Symbol;Acc:HGNC:8878]	264	0.8215871453285217	0.54547125	Yes	
+row_15	CDC14A	cell division cycle 14A [Source:HGNC Symbol;Acc:HGNC:1718]	269	0.8120465278625488	0.5663687	Yes	
+row_16	GCH1	GTP cyclohydrolase 1 [Source:HGNC Symbol;Acc:HGNC:4193]	271	0.8062270879745483	0.58845	Yes	
+row_17	JARID2	jumonji and AT-rich interaction domain containing 2 [Source:HGNC Symbol;Acc:HGNC:6196]	279	0.7983216047286987	0.60761744	Yes	
+row_18	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	335	0.7078083753585815	0.60271144	Yes	
+row_19	IRF4	interferon regulatory factor 4 [Source:HGNC Symbol;Acc:HGNC:6119]	426	0.605961799621582	0.57925016	Yes	
+row_20	ANGPTL2	angiopoietin like 2 [Source:HGNC Symbol;Acc:HGNC:490]	428	0.6052528023719788	0.5957152	Yes	
+row_21	KCNQ5	potassium voltage-gated channel subfamily Q member 5 [Source:HGNC Symbol;Acc:HGNC:6299]	439	0.5964764356613159	0.60789555	Yes	
+row_22	ADORA2A	adenosine A2a receptor [Source:HGNC Symbol;Acc:HGNC:263]	479	0.5630649328231812	0.606126	No	
+row_23	ETV6	ETS variant transcription factor 6 [Source:HGNC Symbol;Acc:HGNC:3495]	577	0.48907628655433655	0.5762565	No	
+row_24	RNF19A	ring finger protein 19A, RBR E3 ubiquitin protein ligase [Source:HGNC Symbol;Acc:HGNC:13432]	684	0.44129741191864014	0.54101235	No	
+row_25	ZFP36L1	ZFP36 ring finger protein like 1 [Source:HGNC Symbol;Acc:HGNC:1107]	729	0.425538033246994	0.53315544	No	
+row_26	CASP4	caspase 4 [Source:HGNC Symbol;Acc:HGNC:1505]	1068	0.3057709336280823	0.38999468	No	
+row_27	KIF15	kinesin family member 15 [Source:HGNC Symbol;Acc:HGNC:17273]	1088	0.3010312616825104	0.38987923	No	
+row_28	EGR2	early growth response 2 [Source:HGNC Symbol;Acc:HGNC:3239]	1160	0.2829471230506897	0.36591908	No	
+row_29	ISYNA1	inositol-3-phosphate synthase 1 [Source:HGNC Symbol;Acc:HGNC:29821]	1289	0.2552162706851959	0.3156005	No	
+row_30	ANKRD28	ankyrin repeat domain 28 [Source:HGNC Symbol;Acc:HGNC:29024]	1840	-0.44865700602531433	0.08128014	No	
+row_31	RCBTB1	RCC1 and BTB domain containing protein 1 [Source:HGNC Symbol;Acc:HGNC:18243]	1935	-0.5181402564048767	0.05356936	No	
+row_32	CTSE	cathepsin E [Source:HGNC Symbol;Acc:HGNC:2530]	2100	-0.7642877101898193	0.001318895	No	
+row_33	FOXP1	forkhead box P1 [Source:HGNC Symbol;Acc:HGNC:3823]	2261	-2.522597551345825	4.353933E-8	No	

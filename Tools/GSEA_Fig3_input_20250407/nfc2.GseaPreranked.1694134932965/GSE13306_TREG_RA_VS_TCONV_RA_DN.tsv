@@ -1,0 +1,26 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CCL5	C-C motif chemokine ligand 5 [Source:HGNC Symbol;Acc:HGNC:10632]	53	1.856040596961975	0.11761574	Yes	
+row_1	TBC1D4	TBC1 domain family member 4 [Source:HGNC Symbol;Acc:HGNC:19165]	194	1.082910418510437	0.14298865	Yes	
+row_2	GOLM1	golgi membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:15451]	330	0.7954729795455933	0.14887492	Yes	
+row_3	COBLL1	cordon-bleu WH2 repeat protein like 1 [Source:HGNC Symbol;Acc:HGNC:23571]	502	0.6148266792297363	0.12699403	Yes	
+row_4	B4GALNT4	beta-1,4-N-acetyl-galactosaminyltransferase 4 [Source:HGNC Symbol;Acc:HGNC:26315]	587	0.5531966686248779	0.13500632	Yes	
+row_5	VGLL4	vestigial like family member 4 [Source:HGNC Symbol;Acc:HGNC:28966]	604	0.5432682037353516	0.16923977	Yes	
+row_6	PPIB	peptidylprolyl isomerase B [Source:HGNC Symbol;Acc:HGNC:9255]	611	0.5402460694313049	0.2072126	Yes	
+row_7	SORL1	sortilin related receptor 1 [Source:HGNC Symbol;Acc:HGNC:11185]	960	0.3703986406326294	0.09689258	No	
+row_8	WDR26	WD repeat domain 26 [Source:HGNC Symbol;Acc:HGNC:21208]	1040	0.3451101779937744	0.091345094	No	
+row_9	UBALD2	UBA like domain containing 2 [Source:HGNC Symbol;Acc:HGNC:28438]	1064	0.3335767090320587	0.10714076	No	
+row_10	CCR8	C-C motif chemokine receptor 8 [Source:HGNC Symbol;Acc:HGNC:1609]	1098	0.32220888137817383	0.11812223	No	
+row_11	GOT2	glutamic-oxaloacetic transaminase 2 [Source:HGNC Symbol;Acc:HGNC:4433]	1151	0.3078267574310303	0.120495774	No	
+row_12	KCNMB4	potassium calcium-activated channel subfamily M regulatory beta subunit 4 [Source:HGNC Symbol;Acc:HGNC:6289]	1247	0.28577232360839844	0.10417207	No	
+row_13	RFTN1	raftlin, lipid raft linker 1 [Source:HGNC Symbol;Acc:HGNC:30278]	1326	0.26940757036209106	0.09336674	No	
+row_14	DOK1	docking protein 1 [Source:HGNC Symbol;Acc:HGNC:2990]	1342	0.26579317450523376	0.10727163	No	
+row_15	PDE6H	phosphodiesterase 6H [Source:HGNC Symbol;Acc:HGNC:8790]	1517	-0.2704138159751892	0.05847643	No	
+row_16	TNFAIP8L2	TNF alpha induced protein 8 like 2 [Source:HGNC Symbol;Acc:HGNC:26277]	1576	-0.2850829064846039	0.05677213	No	
+row_17	ABCC5	ATP binding cassette subfamily C member 5 [Source:HGNC Symbol;Acc:HGNC:56]	1688	-0.31081220507621765	0.035974532	No	
+row_18	PTGES3	prostaglandin E synthase 3 [Source:HGNC Symbol;Acc:HGNC:16049]	1711	-0.3181932866573334	0.051017694	No	
+row_19	INVS	inversin [Source:HGNC Symbol;Acc:HGNC:17870]	1722	-0.32196998596191406	0.07110107	No	
+row_20	KMT2C	lysine methyltransferase 2C [Source:HGNC Symbol;Acc:HGNC:13726]	2116	-0.513748049736023	-0.046354927	No	
+row_21	TDRP	testis development related protein [Source:HGNC Symbol;Acc:HGNC:26951]	2172	-0.555452823638916	-0.026675308	No	
+row_22	NSD1	nuclear receptor binding SET domain protein 1 [Source:HGNC Symbol;Acc:HGNC:14234]	2178	-0.5586720705032349	0.013070298	No	
+row_23	FRY	FRY microtubule binding protein [Source:HGNC Symbol;Acc:HGNC:20367]	2367	-0.8357872366905212	9.526452E-4	No	
+row_24	SLC12A7	solute carrier family 12 member 7 [Source:HGNC Symbol;Acc:HGNC:10915]	2411	-0.9321827292442322	0.053528987	No	

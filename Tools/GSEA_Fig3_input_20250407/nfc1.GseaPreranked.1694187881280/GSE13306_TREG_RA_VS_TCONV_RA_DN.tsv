@@ -1,0 +1,23 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	TBC1D4	TBC1 domain family member 4 [Source:HGNC Symbol;Acc:HGNC:19165]	30	1.9060591459274292	0.1533609	Yes	
+row_1	CCL5	C-C motif chemokine ligand 5 [Source:HGNC Symbol;Acc:HGNC:10632]	234	0.8578880429267883	0.1377892	Yes	
+row_2	VGLL4	vestigial like family member 4 [Source:HGNC Symbol;Acc:HGNC:28966]	276	0.802314281463623	0.18967701	Yes	
+row_3	WDR26	WD repeat domain 26 [Source:HGNC Symbol;Acc:HGNC:21208]	453	0.5858321189880371	0.16235778	Yes	
+row_4	UBALD2	UBA like domain containing 2 [Source:HGNC Symbol;Acc:HGNC:28438]	583	0.4852313995361328	0.14721952	Yes	
+row_5	GPM6B	glycoprotein M6B [Source:HGNC Symbol;Acc:HGNC:4461]	641	0.46061572432518005	0.16207059	Yes	
+row_6	GOLM1	golgi membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:15451]	675	0.44407254457473755	0.18618864	Yes	
+row_7	PPIB	peptidylprolyl isomerase B [Source:HGNC Symbol;Acc:HGNC:9255]	704	0.43376511335372925	0.21163706	Yes	
+row_8	CCR8	C-C motif chemokine receptor 8 [Source:HGNC Symbol;Acc:HGNC:1609]	957	0.33703312277793884	0.1286228	No	
+row_9	KMT5A	lysine methyltransferase 5A [Source:HGNC Symbol;Acc:HGNC:29489]	1001	0.32510119676589966	0.13786821	No	
+row_10	COBLL1	cordon-bleu WH2 repeat protein like 1 [Source:HGNC Symbol;Acc:HGNC:23571]	1060	0.3071993589401245	0.13885105	No	
+row_11	FBXO32	F-box protein 32 [Source:HGNC Symbol;Acc:HGNC:16731]	1104	0.2987503707408905	0.14579113	No	
+row_12	GOT2	glutamic-oxaloacetic transaminase 2 [Source:HGNC Symbol;Acc:HGNC:4433]	1314	0.2515924274921417	0.074498415	No	
+row_13	INVS	inversin [Source:HGNC Symbol;Acc:HGNC:17870]	1341	-0.25708726048469543	0.08538284	No	
+row_14	ABCC5	ATP binding cassette subfamily C member 5 [Source:HGNC Symbol;Acc:HGNC:56]	1421	-0.27594587206840515	0.07425643	No	
+row_15	SH3KBP1	SH3 domain containing kinase binding protein 1 [Source:HGNC Symbol;Acc:HGNC:13867]	1559	-0.3163355886936188	0.04077069	No	
+row_16	TNFAIP8L2	TNF alpha induced protein 8 like 2 [Source:HGNC Symbol;Acc:HGNC:26277]	1661	-0.3595593571662903	0.027137866	No	
+row_17	NSD1	nuclear receptor binding SET domain protein 1 [Source:HGNC Symbol;Acc:HGNC:14234]	1837	-0.44602376222610474	-0.011966235	No	
+row_18	TDRP	testis development related protein [Source:HGNC Symbol;Acc:HGNC:26951]	1841	-0.44881367683410645	0.025959456	No	
+row_19	FRY	FRY microtubule binding protein [Source:HGNC Symbol;Acc:HGNC:20367]	1888	-0.4792962968349457	0.047355525	No	
+row_20	KMT2C	lysine methyltransferase 2C [Source:HGNC Symbol;Acc:HGNC:13726]	1914	-0.5033043026924133	0.080226965	No	
+row_21	SLC12A7	solute carrier family 12 member 7 [Source:HGNC Symbol;Acc:HGNC:10915]	2133	-0.8485614061355591	0.057142895	No	

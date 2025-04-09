@@ -1,0 +1,39 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ICOS	inducible T cell costimulator [Source:HGNC Symbol;Acc:HGNC:5351]	64	1.76656973361969	0.051629983	Yes	
+row_1	NFKBIA	NFKB inhibitor alpha [Source:HGNC Symbol;Acc:HGNC:7797]	94	1.5520446300506592	0.10565332	Yes	
+row_2	MAPKAPK3	MAPK activated protein kinase 3 [Source:HGNC Symbol;Acc:HGNC:6888]	169	1.2328633069992065	0.13235159	Yes	
+row_3	S100A13	S100 calcium binding protein A13 [Source:HGNC Symbol;Acc:HGNC:10490]	181	1.1988725662231445	0.17770918	Yes	
+row_4	PHLDA1	pleckstrin homology like domain family A member 1 [Source:HGNC Symbol;Acc:HGNC:8933]	255	1.0223852396011353	0.19614804	Yes	
+row_5	ARF4	ADP ribosylation factor 4 [Source:HGNC Symbol;Acc:HGNC:655]	279	0.9774571657180786	0.22866432	Yes	
+row_6	RAMP1	receptor activity modifying protein 1 [Source:HGNC Symbol;Acc:HGNC:9843]	347	0.8908746242523193	0.24365276	Yes	
+row_7	DUSP1	dual specificity phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:3064]	471	0.752842366695404	0.23519863	No	
+row_8	ACOT7	acyl-CoA thioesterase 7 [Source:HGNC Symbol;Acc:HGNC:24157]	609	0.6368033289909363	0.21756123	No	
+row_9	CCR4	C-C motif chemokine receptor 4 [Source:HGNC Symbol;Acc:HGNC:1605]	839	0.509527862071991	0.1654656	No	
+row_10	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	905	0.48499175906181335	0.1645495	No	
+row_11	GABARAP	GABA type A receptor-associated protein [Source:HGNC Symbol;Acc:HGNC:4067]	1095	0.41481077671051025	0.12132058	No	
+row_12	SOD1	superoxide dismutase 1 [Source:HGNC Symbol;Acc:HGNC:11179]	1132	0.4067765474319458	0.12644385	No	
+row_13	TENT5A	terminal nucleotidyltransferase 5A [Source:HGNC Symbol;Acc:HGNC:18345]	1238	0.3768753111362457	0.108395	No	
+row_14	DDIT4	DNA damage inducible transcript 4 [Source:HGNC Symbol;Acc:HGNC:24944]	1319	0.35423582792282104	0.097377725	No	
+row_15	MYO16	myosin XVI [Source:HGNC Symbol;Acc:HGNC:29822]	1356	0.3425212800502777	0.09988241	No	
+row_16	PARK7	Parkinsonism associated deglycase [Source:HGNC Symbol;Acc:HGNC:16369]	1474	0.3151716887950897	0.07550096	No	
+row_17	LRIG1	leucine rich repeats and immunoglobulin like domains 1 [Source:HGNC Symbol;Acc:HGNC:17360]	1714	0.2656148076057434	0.010283515	No	
+row_18	IZUMO1R	IZUMO1 receptor, JUNO [Source:HGNC Symbol;Acc:HGNC:32565]	1742	0.26131561398506165	0.012342344	No	
+row_19	INPP5A	inositol polyphosphate-5-phosphatase A [Source:HGNC Symbol;Acc:HGNC:6076]	1809	-0.25004562735557556	0.0015333623	No	
+row_20	RAB11FIP2	RAB11 family interacting protein 2 [Source:HGNC Symbol;Acc:HGNC:29152]	1897	-0.2696719765663147	-0.015157305	No	
+row_21	R3HCC1L	R3H domain and coiled-coil containing 1 like [Source:HGNC Symbol;Acc:HGNC:23512]	2066	-0.3101378083229065	-0.05597043	No	
+row_22	SMC4	structural maintenance of chromosomes 4 [Source:HGNC Symbol;Acc:HGNC:14013]	2086	-0.31531333923339844	-0.049165703	No	
+row_23	SORCS2	sortilin related VPS10 domain containing receptor 2 [Source:HGNC Symbol;Acc:HGNC:16698]	2172	-0.3415085971355438	-0.062292494	No	
+row_24	BCL9L	BCL9 like [Source:HGNC Symbol;Acc:HGNC:23688]	2216	-0.3516481816768646	-0.061643034	No	
+row_25	ISG20	interferon stimulated exonuclease gene 20 [Source:HGNC Symbol;Acc:HGNC:6130]	2231	-0.35639649629592896	-0.051573217	No	
+row_26	CHD8	chromodomain helicase DNA binding protein 8 [Source:HGNC Symbol;Acc:HGNC:20153]	2263	-0.36950773000717163	-0.046377923	No	
+row_27	AFG1L	AFG1 like ATPase [Source:HGNC Symbol;Acc:HGNC:16411]	2334	-0.39698556065559387	-0.05247136	No	
+row_28	VAMP1	vesicle associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:12642]	2514	-0.4682155251502991	-0.090342216	No	
+row_29	RESF1	retroelement silencing factor 1 [Source:HGNC Symbol;Acc:HGNC:25559]	2626	-0.5322149991989136	-0.10396953	No	
+row_30	HSPBAP1	HSPB1 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16389]	2713	-0.590011715888977	-0.10728729	No	
+row_31	PECAM1	platelet and endothelial cell adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:8823]	2813	-0.6668608784675598	-0.11160939	No	
+row_32	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	2863	-0.7080099582672119	-0.098346196	No	
+row_33	CCND2	cyclin D2 [Source:HGNC Symbol;Acc:HGNC:1583]	2885	-0.7307841777801514	-0.07524619	No	
+row_34	KAT2B	lysine acetyltransferase 2B [Source:HGNC Symbol;Acc:HGNC:8638]	2914	-0.7868479490280151	-0.05208861	No	
+row_35	CD2AP	CD2 associated protein [Source:HGNC Symbol;Acc:HGNC:14258]	3009	-0.9433245658874512	-0.043553207	No	
+row_36	SH3PXD2A	SH3 and PX domains 2A [Source:HGNC Symbol;Acc:HGNC:23664]	3023	-0.9725511074066162	-0.008055187	No	
+row_37	RAPGEF6	Rap guanine nucleotide exchange factor 6 [Source:HGNC Symbol;Acc:HGNC:20655]	3121	-1.415590763092041	0.018771889	No	

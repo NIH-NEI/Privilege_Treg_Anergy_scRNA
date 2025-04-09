@@ -1,0 +1,20 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CCL5	C-C motif chemokine ligand 5 [Source:HGNC Symbol;Acc:HGNC:10632]	1	4.077017307281494	0.28513372	Yes	
+row_1	UBALD2	UBA like domain containing 2 [Source:HGNC Symbol;Acc:HGNC:28438]	304	0.8951601386070251	0.23584352	Yes	
+row_2	COBLL1	cordon-bleu WH2 repeat protein like 1 [Source:HGNC Symbol;Acc:HGNC:23571]	389	0.791891872882843	0.26015225	Yes	
+row_3	WDR26	WD repeat domain 26 [Source:HGNC Symbol;Acc:HGNC:21208]	428	0.7502902746200562	0.29860368	Yes	
+row_4	VGLL4	vestigial like family member 4 [Source:HGNC Symbol;Acc:HGNC:28966]	436	0.7417336702346802	0.34795016	Yes	
+row_5	PPIB	peptidylprolyl isomerase B [Source:HGNC Symbol;Acc:HGNC:9255]	480	0.6799781322479248	0.3796239	Yes	
+row_6	DOK1	docking protein 1 [Source:HGNC Symbol;Acc:HGNC:2990]	917	0.41938096284866333	0.2473311	No	
+row_7	B4GALNT4	beta-1,4-N-acetyl-galactosaminyltransferase 4 [Source:HGNC Symbol;Acc:HGNC:26315]	985	0.3880050480365753	0.24965982	No	
+row_8	GOLM1	golgi membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:15451]	1443	0.25805696845054626	0.09828343	No	
+row_9	PTGES3	prostaglandin E synthase 3 [Source:HGNC Symbol;Acc:HGNC:16049]	1576	-0.27009931206703186	0.06825462	No	
+row_10	INVS	inversin [Source:HGNC Symbol;Acc:HGNC:17870]	1781	-0.31440743803977966	0.014632274	No	
+row_11	RFTN1	raftlin, lipid raft linker 1 [Source:HGNC Symbol;Acc:HGNC:30278]	2064	-0.4162500202655792	-0.060779285	No	
+row_12	SORL1	sortilin related receptor 1 [Source:HGNC Symbol;Acc:HGNC:11185]	2079	-0.4211246967315674	-0.036479805	No	
+row_13	KCNMB4	potassium calcium-activated channel subfamily M regulatory beta subunit 4 [Source:HGNC Symbol;Acc:HGNC:6289]	2206	-0.48431941866874695	-0.049282566	No	
+row_14	TDRP	testis development related protein [Source:HGNC Symbol;Acc:HGNC:26951]	2315	-0.5596980452537537	-0.050132643	No	
+row_15	FRY	FRY microtubule binding protein [Source:HGNC Symbol;Acc:HGNC:20367]	2336	-0.5767996311187744	-0.017156288	No	
+row_16	NSD1	nuclear receptor binding SET domain protein 1 [Source:HGNC Symbol;Acc:HGNC:14234]	2385	-0.6222544312477112	0.00862126	No	
+row_17	KMT2C	lysine methyltransferase 2C [Source:HGNC Symbol;Acc:HGNC:13726]	2443	-0.6935960650444031	0.036057662	No	
+row_18	SLC12A7	solute carrier family 12 member 7 [Source:HGNC Symbol;Acc:HGNC:10915]	2562	-0.9199819564819336	0.056729645	No	

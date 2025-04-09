@@ -1,0 +1,40 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	NR4A2	nuclear receptor subfamily 4 group A member 2 [Source:HGNC Symbol;Acc:HGNC:7981]	8	2.541466474533081	0.10890155	Yes	
+row_1	JUNB	JunB proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:6205]	35	1.840869426727295	0.17869338	Yes	
+row_2	FLNB	filamin B [Source:HGNC Symbol;Acc:HGNC:3755]	86	1.3685572147369385	0.21678168	Yes	
+row_3	CD82	CD82 molecule [Source:HGNC Symbol;Acc:HGNC:6210]	138	1.1250028610229492	0.24363896	Yes	
+row_4	SIK2	salt inducible kinase 2 [Source:HGNC Symbol;Acc:HGNC:21680]	251	0.8393914699554443	0.23041302	Yes	
+row_5	CDC14A	cell division cycle 14A [Source:HGNC Symbol;Acc:HGNC:1718]	269	0.8120465278625488	0.25871167	Yes	
+row_6	PTPN11	protein tyrosine phosphatase non-receptor type 11 [Source:HGNC Symbol;Acc:HGNC:9644]	283	0.7922914028167725	0.2879352	Yes	
+row_7	ISY1	ISY1 splicing factor homolog [Source:HGNC Symbol;Acc:HGNC:29201]	285	0.7906953692436218	0.3224862	Yes	
+row_8	SLC35D1	solute carrier family 35 member D1 [Source:HGNC Symbol;Acc:HGNC:20800]	325	0.7250842452049255	0.33703884	Yes	
+row_9	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	335	0.7078083753585815	0.36432204	Yes	
+row_10	COX6B1	cytochrome c oxidase subunit 6B1 [Source:HGNC Symbol;Acc:HGNC:2280]	403	0.6372354030609131	0.36239037	Yes	
+row_11	ZYX	zyxin [Source:HGNC Symbol;Acc:HGNC:13200]	447	0.5898385643959045	0.3691569	Yes	
+row_12	SERPINB1	serpin family B member 1 [Source:HGNC Symbol;Acc:HGNC:3311]	522	0.5233490467071533	0.35903504	Yes	
+row_13	CARD19	caspase recruitment domain family member 19 [Source:HGNC Symbol;Acc:HGNC:28148]	553	0.5021875500679016	0.36776957	Yes	
+row_14	PBX3	PBX homeobox 3 [Source:HGNC Symbol;Acc:HGNC:8634]	554	0.5016729831695557	0.38997656	Yes	
+row_15	SIRT2	sirtuin 2 [Source:HGNC Symbol;Acc:HGNC:10886]	556	0.5005083680152893	0.41168216	Yes	
+row_16	THY1	Thy-1 cell surface antigen [Source:HGNC Symbol;Acc:HGNC:11801]	605	0.476179838180542	0.41116825	Yes	
+row_17	CRYBG1	crystallin beta-gamma domain containing 1 [Source:HGNC Symbol;Acc:HGNC:356]	693	0.43731367588043213	0.39139003	Yes	
+row_18	SH3BGRL	SH3 domain binding glutamate rich protein like [Source:HGNC Symbol;Acc:HGNC:10823]	715	0.430786669254303	0.4010125	Yes	
+row_19	ADIPOR2	adiponectin receptor 2 [Source:HGNC Symbol;Acc:HGNC:24041]	770	0.40264520049095154	0.39454445	Yes	
+row_20	TOMM7	translocase of outer mitochondrial membrane 7 [Source:HGNC Symbol;Acc:HGNC:21648]	778	0.3987877070903778	0.40904826	Yes	
+row_21	ATP5F1A	ATP synthase F1 subunit alpha [Source:HGNC Symbol;Acc:HGNC:823]	784	0.3968891203403473	0.4243677	Yes	
+row_22	STMP1	short transmembrane mitochondrial protein 1 [Source:HGNC Symbol;Acc:HGNC:41909]	787	0.39603713154792786	0.44099894	Yes	
+row_23	NDUFS5	NADH:ubiquinone oxidoreductase subunit S5 [Source:HGNC Symbol;Acc:HGNC:7712]	952	0.3385363221168518	0.38221037	No	
+row_24	BAX	BCL2 associated X, apoptosis regulator [Source:HGNC Symbol;Acc:HGNC:959]	979	0.3307969570159912	0.3851575	No	
+row_25	NFKBIE	NFKB inhibitor epsilon [Source:HGNC Symbol;Acc:HGNC:7799]	1055	0.3091059625148773	0.36510217	No	
+row_26	PRKCSH	protein kinase C substrate 80K-H [Source:HGNC Symbol;Acc:HGNC:9411]	1100	0.299227237701416	0.35855463	No	
+row_27	ABI2	abl interactor 2 [Source:HGNC Symbol;Acc:HGNC:24011]	1114	0.2951083779335022	0.36576992	No	
+row_28	PRKCH	protein kinase C eta [Source:HGNC Symbol;Acc:HGNC:9403]	1198	0.27404141426086426	0.34056368	No	
+row_29	VCP	valosin containing protein [Source:HGNC Symbol;Acc:HGNC:12666]	1200	0.27338430285453796	0.35221544	No	
+row_30	NDE1	nudE neurodevelopment protein 1 [Source:HGNC Symbol;Acc:HGNC:17619]	1215	0.26955941319465637	0.35784993	No	
+row_31	SNF8	SNF8 subunit of ESCRT-II [Source:HGNC Symbol;Acc:HGNC:17028]	1245	0.2630588412284851	0.35644904	No	
+row_32	DGKH	diacylglycerol kinase eta [Source:HGNC Symbol;Acc:HGNC:2854]	1277	0.2572130262851715	0.35388967	No	
+row_33	C9orf72	C9orf72-SMCR8 complex subunit [Source:HGNC Symbol;Acc:HGNC:28337]	1288	0.2557230591773987	0.36071107	No	
+row_34	LRRC58	leucine rich repeat containing 58 [Source:HGNC Symbol;Acc:HGNC:26968]	1305	0.25273168087005615	0.36470097	No	
+row_35	ALG14	ALG14 UDP-N-acetylglucosaminyltransferase subunit [Source:HGNC Symbol;Acc:HGNC:28287]	1393	-0.2683057487010956	0.33744147	No	
+row_36	ATXN2L	ataxin 2 like [Source:HGNC Symbol;Acc:HGNC:31326]	1475	-0.29189953207969666	0.31392542	No	
+row_37	SLCO3A1	solute carrier organic anion transporter family member 3A1 [Source:HGNC Symbol;Acc:HGNC:10952]	1819	-0.4359217584133148	0.17892589	No	
+row_38	HS2ST1	heparan sulfate 2-O-sulfotransferase 1 [Source:HGNC Symbol;Acc:HGNC:5193]	1826	-0.4394932985305786	0.19568141	No	

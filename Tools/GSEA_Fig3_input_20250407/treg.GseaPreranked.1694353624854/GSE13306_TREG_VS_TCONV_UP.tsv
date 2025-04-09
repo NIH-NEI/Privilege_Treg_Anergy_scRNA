@@ -1,0 +1,34 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ICOS	inducible T cell costimulator [Source:HGNC Symbol;Acc:HGNC:5351]	10	2.8784165382385254	0.10174792	Yes	
+row_1	S100A13	S100 calcium binding protein A13 [Source:HGNC Symbol;Acc:HGNC:10490]	80	1.6269207000732422	0.13564642	Yes	
+row_2	NFKBIA	NFKB inhibitor alpha [Source:HGNC Symbol;Acc:HGNC:7797]	85	1.5698777437210083	0.19168127	Yes	
+row_3	IZUMO1R	IZUMO1 receptor, JUNO [Source:HGNC Symbol;Acc:HGNC:32565]	94	1.5372201204299927	0.24502857	Yes	
+row_4	MAPKAPK3	MAPK activated protein kinase 3 [Source:HGNC Symbol;Acc:HGNC:6888]	120	1.3836344480514526	0.28641176	Yes	
+row_5	PHLDA1	pleckstrin homology like domain family A member 1 [Source:HGNC Symbol;Acc:HGNC:8933]	185	1.141014575958252	0.3043686	Yes	
+row_6	RAMP1	receptor activity modifying protein 1 [Source:HGNC Symbol;Acc:HGNC:9843]	188	1.1328365802764893	0.34513417	Yes	
+row_7	ARF4	ADP ribosylation factor 4 [Source:HGNC Symbol;Acc:HGNC:655]	253	0.9917773008346558	0.3576224	Yes	
+row_8	DDIT4	DNA damage inducible transcript 4 [Source:HGNC Symbol;Acc:HGNC:24944]	310	0.8867588639259338	0.36924416	Yes	
+row_9	DUSP1	dual specificity phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:3064]	328	0.8664921522140503	0.39465922	Yes	
+row_10	GABARAP	GABA type A receptor-associated protein [Source:HGNC Symbol;Acc:HGNC:4067]	393	0.7875441312789917	0.39966366	Yes	
+row_11	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	426	0.7509856820106506	0.4152554	Yes	
+row_12	CCR4	C-C motif chemokine receptor 4 [Source:HGNC Symbol;Acc:HGNC:1605]	450	0.7148486971855164	0.43287742	Yes	
+row_13	ACOT7	acyl-CoA thioesterase 7 [Source:HGNC Symbol;Acc:HGNC:24157]	777	0.47184064984321594	0.32866153	No	
+row_14	LTB	lymphotoxin beta [Source:HGNC Symbol;Acc:HGNC:6711]	894	0.4259449541568756	0.30103442	No	
+row_15	PPDPF	pancreatic progenitor cell differentiation and proliferation factor [Source:HGNC Symbol;Acc:HGNC:16142]	920	0.4185711145401001	0.3070544	No	
+row_16	ASXL1	ASXL transcriptional regulator 1 [Source:HGNC Symbol;Acc:HGNC:18318]	1045	0.365054726600647	0.27421433	No	
+row_17	DNAJB13	DnaJ heat shock protein family (Hsp40) member B13 [Source:HGNC Symbol;Acc:HGNC:30718]	1143	0.3315229117870331	0.2502089	No	
+row_18	YPEL2	yippee like 2 [Source:HGNC Symbol;Acc:HGNC:18326]	1252	0.30150166153907776	0.22100353	No	
+row_19	VAMP3	vesicle associated membrane protein 3 [Source:HGNC Symbol;Acc:HGNC:12644]	1280	0.2942226827144623	0.2217215	No	
+row_20	CSF1	colony stimulating factor 1 [Source:HGNC Symbol;Acc:HGNC:2432]	1347	0.27869856357574463	0.20733464	No	
+row_21	AFG1L	AFG1 like ATPase [Source:HGNC Symbol;Acc:HGNC:16411]	1701	-0.29642072319984436	0.08662738	No	
+row_22	SORCS2	sortilin related VPS10 domain containing receptor 2 [Source:HGNC Symbol;Acc:HGNC:16698]	1860	-0.333517462015152	0.039959308	No	
+row_23	RESF1	retroelement silencing factor 1 [Source:HGNC Symbol;Acc:HGNC:25559]	1906	-0.3505946099758148	0.036034033	No	
+row_24	CHD8	chromodomain helicase DNA binding protein 8 [Source:HGNC Symbol;Acc:HGNC:20153]	2008	-0.3917280435562134	0.01274387	No	
+row_25	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	2215	-0.4888506233692169	-0.04612268	No	
+row_26	HSPBAP1	HSPB1 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16389]	2241	-0.5116531848907471	-0.036691874	No	
+row_27	RAPGEF6	Rap guanine nucleotide exchange factor 6 [Source:HGNC Symbol;Acc:HGNC:20655]	2303	-0.5503754615783691	-0.039259966	No	
+row_28	KAT2B	lysine acetyltransferase 2B [Source:HGNC Symbol;Acc:HGNC:8638]	2505	-0.7870531678199768	-0.08533577	No	
+row_29	SH3PXD2A	SH3 and PX domains 2A [Source:HGNC Symbol;Acc:HGNC:23664]	2543	-0.8583259582519531	-0.06767428	No	
+row_30	CD2AP	CD2 associated protein [Source:HGNC Symbol;Acc:HGNC:14258]	2552	-0.8769505023956299	-0.038521532	No	
+row_31	PECAM1	platelet and endothelial cell adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:8823]	2570	-0.9463120698928833	-0.010181592	No	
+row_32	SMC4	structural maintenance of chromosomes 4 [Source:HGNC Symbol;Acc:HGNC:14013]	2689	-1.7425456047058105	0.009690659	No	

@@ -1,0 +1,42 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	S100A4	S100 calcium binding protein A4 [Source:HGNC Symbol;Acc:HGNC:10494]	0	3.7469513416290283	0.12610611	Yes	
+row_1	H2AZ1	H2A.Z variant histone 1 [Source:HGNC Symbol;Acc:HGNC:4741]	11	2.553980827331543	0.20887731	Yes	
+row_2	IKZF2	IKAROS family zinc finger 2 [Source:HGNC Symbol;Acc:HGNC:13177]	151	1.286158561706543	0.2078963	Yes	
+row_3	DBI	diazepam binding inhibitor, acyl-CoA binding protein [Source:HGNC Symbol;Acc:HGNC:2690]	241	1.0664288997650146	0.21544373	Yes	
+row_4	SOCS2	suppressor of cytokine signaling 2 [Source:HGNC Symbol;Acc:HGNC:19382]	256	1.0216872692108154	0.24537069	Yes	
+row_5	MDFIC	MyoD family inhibitor domain containing [Source:HGNC Symbol;Acc:HGNC:28870]	266	1.0036065578460693	0.27628148	Yes	
+row_6	CD80	CD80 molecule [Source:HGNC Symbol;Acc:HGNC:1700]	365	0.866272509098053	0.27422628	Yes	
+row_7	HPF1	histone PARylation factor 1 [Source:HGNC Symbol;Acc:HGNC:26051]	452	0.7784074544906616	0.27303556	Yes	
+row_8	PRIM1	DNA primase subunit 1 [Source:HGNC Symbol;Acc:HGNC:9369]	455	0.7750175595283508	0.29848233	Yes	
+row_9	HNRNPL	heterogeneous nuclear ribonucleoprotein L [Source:HGNC Symbol;Acc:HGNC:5045]	576	0.6619611978530884	0.28254452	No	
+row_10	MAST2	microtubule associated serine/threonine kinase 2 [Source:HGNC Symbol;Acc:HGNC:19035]	667	0.6041611433029175	0.27421552	No	
+row_11	PLEKHO1	pleckstrin homology domain containing O1 [Source:HGNC Symbol;Acc:HGNC:24310]	808	0.5225734114646912	0.24721709	No	
+row_12	DDOST	dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunit [Source:HGNC Symbol;Acc:HGNC:2728]	922	0.47924262285232544	0.22735906	No	
+row_13	MASTL	microtubule associated serine/threonine kinase like [Source:HGNC Symbol;Acc:HGNC:19042]	1017	0.44327640533447266	0.21234152	No	
+row_14	ANTKMT	adenine nucleotide translocase lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:14152]	1078	0.42008471488952637	0.20737146	No	
+row_15	MAP4	microtubule associated protein 4 [Source:HGNC Symbol;Acc:HGNC:6862]	1212	0.38400140404701233	0.1779386	No	
+row_16	LARP7	La ribonucleoprotein 7, transcriptional regulator [Source:HGNC Symbol;Acc:HGNC:24912]	1276	0.3653814196586609	0.17017205	No	
+row_17	PTPN11	protein tyrosine phosphatase non-receptor type 11 [Source:HGNC Symbol;Acc:HGNC:9644]	1292	0.3620684742927551	0.17758064	No	
+row_18	WDR83OS	WD repeat domain 83 opposite strand [Source:HGNC Symbol;Acc:HGNC:30203]	1406	0.3318064510822296	0.15276054	No	
+row_19	ARPC2	actin related protein 2/3 complex subunit 2 [Source:HGNC Symbol;Acc:HGNC:705]	1417	0.3303132951259613	0.16069274	No	
+row_20	DOT1L	DOT1 like histone lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:24948]	1478	0.31484347581863403	0.15218072	No	
+row_21	PNP	purine nucleoside phosphorylase [Source:HGNC Symbol;Acc:HGNC:7892]	1539	0.30132120847702026	0.1432136	No	
+row_22	GOLPH3	golgi phosphoprotein 3 [Source:HGNC Symbol;Acc:HGNC:15452]	1642	0.2816012501716614	0.120207004	No	
+row_23	POLR2J	RNA polymerase II subunit J [Source:HGNC Symbol;Acc:HGNC:9197]	1702	0.2675592601299286	0.11042208	No	
+row_24	EXO1	exonuclease 1 [Source:HGNC Symbol;Acc:HGNC:3511]	1739	0.2624662220478058	0.10779058	No	
+row_25	IZUMO1R	IZUMO1 receptor, JUNO [Source:HGNC Symbol;Acc:HGNC:32565]	1742	0.26131561398506165	0.115948394	No	
+row_26	MED10	mediator complex subunit 10 [Source:HGNC Symbol;Acc:HGNC:28760]	1789	0.2535199224948883	0.10983109	No	
+row_27	SCD	stearoyl-CoA desaturase [Source:HGNC Symbol;Acc:HGNC:10571]	1850	-0.2598537802696228	0.09946836	No	
+row_28	ZBTB37	zinc finger and BTB domain containing 37 [Source:HGNC Symbol;Acc:HGNC:28365]	1896	-0.2695024311542511	0.09420743	No	
+row_29	TXK	TXK tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:12434]	2020	-0.30009719729423523	0.06513543	No	
+row_30	CCDC88C	coiled-coil domain containing 88C [Source:HGNC Symbol;Acc:HGNC:19967]	2227	-0.35546648502349854	0.011493786	No	
+row_31	VAMP1	vesicle associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:12642]	2514	-0.4682155251502991	-0.06383091	No	
+row_32	DIAPH2	diaphanous related formin 2 [Source:HGNC Symbol;Acc:HGNC:2877]	2821	-0.6743149757385254	-0.13858864	No	
+row_33	CBL	Cbl proto-oncogene [Source:HGNC Symbol;Acc:HGNC:1541]	2845	-0.6935409903526306	-0.12257189	No	
+row_34	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	2863	-0.7080099582672119	-0.104157366	No	
+row_35	MBD5	methyl-CpG binding domain protein 5 [Source:HGNC Symbol;Acc:HGNC:20444]	2953	-0.8302091360092163	-0.10456008	No	
+row_36	SLC44A2	solute carrier family 44 member 2 [Source:HGNC Symbol;Acc:HGNC:17292]	2954	-0.8308742642402649	-0.076596454	No	
+row_37	KLF2	KLF transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:6347]	2996	-0.9064784049987793	-0.05914565	No	
+row_38	ZNRF3	zinc and ring finger 3 [Source:HGNC Symbol;Acc:HGNC:18126]	3003	-0.9239951968193054	-0.02995881	No	
+row_39	HSD11B1	hydroxysteroid 11-beta dehydrogenase 1 [Source:HGNC Symbol;Acc:HGNC:5208]	3079	-1.1459482908248901	-0.015276515	No	
+row_40	BCL2	BCL2 apoptosis regulator [Source:HGNC Symbol;Acc:HGNC:990]	3117	-1.400172233581543	0.020063765	No	

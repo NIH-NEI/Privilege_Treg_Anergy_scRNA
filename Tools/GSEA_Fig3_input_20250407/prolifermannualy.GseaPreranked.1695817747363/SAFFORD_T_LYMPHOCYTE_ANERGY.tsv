@@ -1,0 +1,33 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	SRGN	serglycin [Source:HGNC Symbol;Acc:HGNC:9361]	29	2.1219513416290283	0.055368986	Yes	
+row_1	LAG3	lymphocyte activating 3 [Source:HGNC Symbol;Acc:HGNC:6476]	52	1.880101203918457	0.105600566	Yes	
+row_2	STX11	syntaxin 11 [Source:HGNC Symbol;Acc:HGNC:11429]	73	1.7295472621917725	0.15188539	Yes	
+row_3	GADD45B	growth arrest and DNA damage inducible beta [Source:HGNC Symbol;Acc:HGNC:4096]	77	1.698806643486023	0.20263322	Yes	
+row_4	FURIN	furin, paired basic amino acid cleaving enzyme [Source:HGNC Symbol;Acc:HGNC:8568]	82	1.6531840562820435	0.25167504	Yes	
+row_5	TNFRSF4	TNF receptor superfamily member 4 [Source:HGNC Symbol;Acc:HGNC:11918]	97	1.5430952310562134	0.29419085	Yes	
+row_6	TNFSF11	TNF superfamily member 11 [Source:HGNC Symbol;Acc:HGNC:11926]	98	1.5314089059829712	0.3407969	Yes	
+row_7	NR4A2	nuclear receptor subfamily 4 group A member 2 [Source:HGNC Symbol;Acc:HGNC:7981]	114	1.4243136644363403	0.37938023	Yes	
+row_8	NR4A3	nuclear receptor subfamily 4 group A member 3 [Source:HGNC Symbol;Acc:HGNC:7982]	116	1.420719027519226	0.4223	Yes	
+row_9	KIF15	kinesin family member 15 [Source:HGNC Symbol;Acc:HGNC:17273]	152	1.2853741645812988	0.4503037	Yes	
+row_10	NDRG1	N-myc downstream regulated 1 [Source:HGNC Symbol;Acc:HGNC:7679]	161	1.2523144483566284	0.48587546	Yes	
+row_11	MMD	monocyte to macrophage differentiation associated [Source:HGNC Symbol;Acc:HGNC:7153]	318	0.9282966256141663	0.46458715	No	
+row_12	MYO1E	myosin IE [Source:HGNC Symbol;Acc:HGNC:7599]	339	0.9010233879089355	0.48565716	No	
+row_13	ANP32A	acidic nuclear phosphoprotein 32 family member A [Source:HGNC Symbol;Acc:HGNC:13233]	427	0.797147810459137	0.48228928	No	
+row_14	PFKP	phosphofructokinase, platelet [Source:HGNC Symbol;Acc:HGNC:8878]	492	0.7338043451309204	0.48429757	No	
+row_15	IRF4	interferon regulatory factor 4 [Source:HGNC Symbol;Acc:HGNC:6119]	632	0.6216102242469788	0.4590743	No	
+row_16	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	654	0.6106690764427185	0.47099027	No	
+row_17	ANGPTL2	angiopoietin like 2 [Source:HGNC Symbol;Acc:HGNC:490]	706	0.5830219388008118	0.472538	No	
+row_18	KCNQ5	potassium voltage-gated channel subfamily Q member 5 [Source:HGNC Symbol;Acc:HGNC:6299]	764	0.5466963648796082	0.47107488	No	
+row_19	CDC14A	cell division cycle 14A [Source:HGNC Symbol;Acc:HGNC:1718]	805	0.5233644843101501	0.4743002	No	
+row_20	ADORA2A	adenosine A2a receptor [Source:HGNC Symbol;Acc:HGNC:263]	1220	0.38190528750419617	0.35445258	No	
+row_21	CCL3	C-C motif chemokine ligand 3 [Source:HGNC Symbol;Acc:HGNC:10627]	1335	0.35002440214157104	0.32890305	No	
+row_22	NFATC1	nuclear factor of activated T cells 1 [Source:HGNC Symbol;Acc:HGNC:7775]	1529	0.3040649890899658	0.2768675	No	
+row_23	GCH1	GTP cyclohydrolase 1 [Source:HGNC Symbol;Acc:HGNC:4193]	1537	0.3013574182987213	0.28381592	No	
+row_24	ANKRD28	ankyrin repeat domain 28 [Source:HGNC Symbol;Acc:HGNC:29024]	2350	-0.40059059858322144	0.038147632	No	
+row_25	RNF19A	ring finger protein 19A, RBR E3 ubiquitin protein ligase [Source:HGNC Symbol;Acc:HGNC:13432]	2357	-0.4054429233074188	0.048581284	No	
+row_26	ZFP36L1	ZFP36 ring finger protein like 1 [Source:HGNC Symbol;Acc:HGNC:1107]	2705	-0.5841183662414551	-0.043835703	No	
+row_27	RCBTB1	RCC1 and BTB domain containing protein 1 [Source:HGNC Symbol;Acc:HGNC:18243]	2726	-0.5955452919006348	-0.032062437	No	
+row_28	FYN	FYN proto-oncogene, Src family tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:4037]	2814	-0.6686841249465942	-0.039339907	No	
+row_29	CD40LG	CD40 ligand [Source:HGNC Symbol;Acc:HGNC:11935]	2870	-0.7114552855491638	-0.035153743	No	
+row_30	CTSE	cathepsin E [Source:HGNC Symbol;Acc:HGNC:2530]	3039	-1.018309473991394	-0.057513364	No	
+row_31	FOXP1	forkhead box P1 [Source:HGNC Symbol;Acc:HGNC:3823]	3180	-3.3506534099578857	-4.7060894E-8	No	

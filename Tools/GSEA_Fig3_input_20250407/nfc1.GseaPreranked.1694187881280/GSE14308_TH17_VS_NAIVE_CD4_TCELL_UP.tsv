@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	GAPDH	glyceraldehyde-3-phosphate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:4141]	126	1.1816320419311523	0.011226891	Yes	
+row_1	ADAM12	ADAM metallopeptidase domain 12 [Source:HGNC Symbol;Acc:HGNC:190]	140	1.1200425624847412	0.069639064	Yes	
+row_2	COX17	cytochrome c oxidase copper chaperone COX17 [Source:HGNC Symbol;Acc:HGNC:2264]	183	0.975036084651947	0.10671733	Yes	
+row_3	REEP3	receptor accessory protein 3 [Source:HGNC Symbol;Acc:HGNC:23711]	203	0.9108788967132568	0.15043862	Yes	
+row_4	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	335	0.7078083753585815	0.13224225	Yes	
+row_5	BMPR2	bone morphogenetic protein receptor type 2 [Source:HGNC Symbol;Acc:HGNC:1078]	389	0.6539856791496277	0.14596751	Yes	
+row_6	ATP10A	ATPase phospholipid transporting 10A (putative) [Source:HGNC Symbol;Acc:HGNC:13542]	400	0.6417071223258972	0.17828828	Yes	
+row_7	P2RY10	P2Y receptor family member 10 [Source:HGNC Symbol;Acc:HGNC:19906]	474	0.5708549618721008	0.1782684	Yes	
+row_8	AP3B1	adaptor related protein complex 3 subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:566]	475	0.5703107118606567	0.21098211	Yes	
+row_9	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	483	0.5573641657829285	0.23981138	Yes	
+row_10	GRIK4	glutamate ionotropic receptor kainate type subunit 4 [Source:HGNC Symbol;Acc:HGNC:4582]	532	0.5181951522827148	0.2479917	Yes	
+row_11	CEMIP2	cell migration inducing hyaluronidase 2 [Source:HGNC Symbol;Acc:HGNC:11869]	564	0.49486857652664185	0.26246414	Yes	
+row_12	RAD51B	RAD51 paralog B [Source:HGNC Symbol;Acc:HGNC:9822]	566	0.4935568571090698	0.29032633	Yes	
+row_13	GPM6B	glycoprotein M6B [Source:HGNC Symbol;Acc:HGNC:4461]	641	0.46061572432518005	0.28353414	Yes	
+row_14	GTF2IRD1	GTF2I repeat domain containing 1 [Source:HGNC Symbol;Acc:HGNC:4661]	730	0.425367146730423	0.26843643	Yes	
+row_15	NDUFA13	NADH:ubiquinone oxidoreductase subunit A13 [Source:HGNC Symbol;Acc:HGNC:17194]	741	0.41879892349243164	0.2879709	Yes	
+row_16	EIF3F	eukaryotic translation initiation factor 3 subunit F [Source:HGNC Symbol;Acc:HGNC:3275]	746	0.41569867730140686	0.31002057	Yes	
+row_17	LRP10	LDL receptor related protein 10 [Source:HGNC Symbol;Acc:HGNC:14553]	808	0.38804614543914795	0.30490053	No	
+row_18	TSHZ1	teashirt zinc finger homeobox 1 [Source:HGNC Symbol;Acc:HGNC:10669]	924	0.3479437530040741	0.27324322	No	
+row_19	MICAL1	microtubule associated monooxygenase, calponin and LIM domain containing 1 [Source:HGNC Symbol;Acc:HGNC:20619]	949	0.33874306082725525	0.28190193	No	
+row_20	NEDD8	NEDD8 ubiquitin like modifier [Source:HGNC Symbol;Acc:HGNC:7732]	1083	0.3018254339694977	0.23952022	No	
+row_21	NENF	neudesin neurotrophic factor [Source:HGNC Symbol;Acc:HGNC:30384]	1202	0.27283135056495667	0.20220786	No	
+row_22	NDE1	nudE neurodevelopment protein 1 [Source:HGNC Symbol;Acc:HGNC:17619]	1215	0.26955941319465637	0.21228412	No	
+row_23	ZBTB7A	zinc finger and BTB domain containing 7A [Source:HGNC Symbol;Acc:HGNC:18078]	1216	0.2691977322101593	0.22772563	No	
+row_24	TRIM24	tripartite motif containing 24 [Source:HGNC Symbol;Acc:HGNC:11812]	1261	0.259696364402771	0.22287346	No	
+row_25	LEO1	LEO1 homolog, Paf1/RNA polymerase II complex component [Source:HGNC Symbol;Acc:HGNC:30401]	1297	0.25360527634620667	0.22171143	No	
+row_26	LIMD2	LIM domain containing 2 [Source:HGNC Symbol;Acc:HGNC:28142]	1334	-0.2549763023853302	0.22017919	No	
+row_27	GNGT2	G protein subunit gamma transducin 2 [Source:HGNC Symbol;Acc:HGNC:4412]	1701	-0.37683984637260437	0.07752228	No	
+row_28	SLCO3A1	solute carrier organic anion transporter family member 3A1 [Source:HGNC Symbol;Acc:HGNC:10952]	1819	-0.4359217584133148	0.050013814	No	
+row_29	TESC	tescalcin [Source:HGNC Symbol;Acc:HGNC:26065]	1828	-0.4400542378425598	0.0716652	No	
+row_30	PML	PML nuclear body scaffold [Source:HGNC Symbol;Acc:HGNC:9113]	1889	-0.4794255197048187	0.072235644	No	
+row_31	FOCAD	focadhesin [Source:HGNC Symbol;Acc:HGNC:23377]	1913	-0.5027866959571838	0.09075294	No	
+row_32	RANBP9	RAN binding protein 9 [Source:HGNC Symbol;Acc:HGNC:13727]	1931	-0.5143396258354187	0.11262592	No	
+row_33	EYA2	EYA transcriptional coactivator and phosphatase 2 [Source:HGNC Symbol;Acc:HGNC:3520]	2029	-0.610866129398346	0.10412914	No	

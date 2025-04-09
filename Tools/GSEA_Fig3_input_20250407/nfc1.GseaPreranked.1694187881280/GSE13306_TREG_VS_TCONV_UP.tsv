@@ -1,0 +1,33 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ICOS	inducible T cell costimulator [Source:HGNC Symbol;Acc:HGNC:5351]	55	1.6570329666137695	0.04988266	Yes	
+row_1	LRIG1	leucine rich repeats and immunoglobulin like domains 1 [Source:HGNC Symbol;Acc:HGNC:17360]	96	1.2971595525741577	0.09030185	Yes	
+row_2	NFKBIA	NFKB inhibitor alpha [Source:HGNC Symbol;Acc:HGNC:7797]	100	1.282118797302246	0.14663632	Yes	
+row_3	DUSP1	dual specificity phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:3064]	103	1.2680857181549072	0.20278789	Yes	
+row_4	ARF4	ADP ribosylation factor 4 [Source:HGNC Symbol;Acc:HGNC:655]	112	1.2248382568359375	0.25430328	Yes	
+row_5	MAPKAPK3	MAPK activated protein kinase 3 [Source:HGNC Symbol;Acc:HGNC:6888]	120	1.2027180194854736	0.30527195	Yes	
+row_6	RAMP1	receptor activity modifying protein 1 [Source:HGNC Symbol;Acc:HGNC:9843]	154	1.0710252523422241	0.33865687	Yes	
+row_7	S100A13	S100 calcium binding protein A13 [Source:HGNC Symbol;Acc:HGNC:10490]	242	0.8503216505050659	0.33789754	No	
+row_8	PHLDA1	pleckstrin homology like domain family A member 1 [Source:HGNC Symbol;Acc:HGNC:8933]	432	0.6016914248466492	0.280213	No	
+row_9	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	483	0.5573641657829285	0.2828661	No	
+row_10	GABARAP	GABA type A receptor-associated protein [Source:HGNC Symbol;Acc:HGNC:4067]	521	0.5235887765884399	0.28982928	No	
+row_11	CCR4	C-C motif chemokine receptor 4 [Source:HGNC Symbol;Acc:HGNC:1605]	677	0.4431939423084259	0.2402609	No	
+row_12	ACOT7	acyl-CoA thioesterase 7 [Source:HGNC Symbol;Acc:HGNC:24157]	742	0.4178469777107239	0.23035938	No	
+row_13	TENT5A	terminal nucleotidyltransferase 5A [Source:HGNC Symbol;Acc:HGNC:18345]	757	0.4081094264984131	0.24244131	No	
+row_14	YPEL2	yippee like 2 [Source:HGNC Symbol;Acc:HGNC:18326]	877	0.3614180386066437	0.20533751	No	
+row_15	STX6	syntaxin 6 [Source:HGNC Symbol;Acc:HGNC:11441]	1052	0.3103824853897095	0.14127403	No	
+row_16	ARL3	ADP ribosylation factor like GTPase 3 [Source:HGNC Symbol;Acc:HGNC:694]	1094	0.3004204332828522	0.13640365	No	
+row_17	VAMP1	vesicle associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:12642]	1424	-0.27729105949401855	0.0013447539	No	
+row_18	BCL9L	BCL9 like [Source:HGNC Symbol;Acc:HGNC:23688]	1440	-0.28168079257011414	0.0072905077	No	
+row_19	CHD8	chromodomain helicase DNA binding protein 8 [Source:HGNC Symbol;Acc:HGNC:20153]	1449	-0.28538110852241516	0.016541744	No	
+row_20	CCND2	cyclin D2 [Source:HGNC Symbol;Acc:HGNC:1583]	1511	-0.299193799495697	0.0026475687	No	
+row_21	SORCS2	sortilin related VPS10 domain containing receptor 2 [Source:HGNC Symbol;Acc:HGNC:16698]	1601	-0.33083879947662354	-0.02237902	No	
+row_22	RESF1	retroelement silencing factor 1 [Source:HGNC Symbol;Acc:HGNC:25559]	1812	-0.4294593334197998	-0.097228974	No	
+row_23	PECAM1	platelet and endothelial cell adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:8823]	1843	-0.4493831396102905	-0.090465106	No	
+row_24	ISG20	interferon stimulated exonuclease gene 20 [Source:HGNC Symbol;Acc:HGNC:6130]	1912	-0.5024455189704895	-0.098354444	No	
+row_25	HSPBAP1	HSPB1 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16389]	1922	-0.5099388957023621	-0.079449266	No	
+row_26	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	1982	-0.5583092570304871	-0.080789536	No	
+row_27	CD2AP	CD2 associated protein [Source:HGNC Symbol;Acc:HGNC:14258]	2026	-0.6084975600242615	-0.07269705	No	
+row_28	KAT2B	lysine acetyltransferase 2B [Source:HGNC Symbol;Acc:HGNC:8638]	2075	-0.7020387649536133	-0.06263851	No	
+row_29	SH3PXD2A	SH3 and PX domains 2A [Source:HGNC Symbol;Acc:HGNC:23664]	2166	-0.9507619142532349	-0.060224522	No	
+row_30	RAPGEF6	Rap guanine nucleotide exchange factor 6 [Source:HGNC Symbol;Acc:HGNC:20655]	2176	-0.9952213764190674	-0.019487532	No	
+row_31	SMC4	structural maintenance of chromosomes 4 [Source:HGNC Symbol;Acc:HGNC:14013]	2216	-1.2704731225967407	0.020179523	No	

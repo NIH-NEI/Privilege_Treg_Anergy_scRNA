@@ -1,0 +1,39 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	S100A4	S100 calcium binding protein A4 [Source:HGNC Symbol;Acc:HGNC:10494]	0	4.823666572570801	0.16586748	Yes	
+row_1	SOCS2	suppressor of cytokine signaling 2 [Source:HGNC Symbol;Acc:HGNC:19382]	92	1.5452888011932373	0.18502347	Yes	
+row_2	IZUMO1R	IZUMO1 receptor, JUNO [Source:HGNC Symbol;Acc:HGNC:32565]	94	1.5372201204299927	0.23750919	Yes	
+row_3	IKZF2	IKAROS family zinc finger 2 [Source:HGNC Symbol;Acc:HGNC:13177]	100	1.4924695491790771	0.28696245	Yes	
+row_4	MDFIC	MyoD family inhibitor domain containing [Source:HGNC Symbol;Acc:HGNC:28870]	102	1.485022783279419	0.3376533	Yes	
+row_5	CD80	CD80 molecule [Source:HGNC Symbol;Acc:HGNC:1700]	123	1.3711838722229004	0.37733483	Yes	
+row_6	HNRNPL	heterogeneous nuclear ribonucleoprotein L [Source:HGNC Symbol;Acc:HGNC:5045]	399	0.7831549048423767	0.30157596	No	
+row_7	ARPC2	actin related protein 2/3 complex subunit 2 [Source:HGNC Symbol;Acc:HGNC:705]	430	0.7488237619400024	0.31612277	No	
+row_8	F2R	coagulation factor II thrombin receptor [Source:HGNC Symbol;Acc:HGNC:3537]	603	0.5812698602676392	0.27188337	No	
+row_9	GOLPH3	golgi phosphoprotein 3 [Source:HGNC Symbol;Acc:HGNC:15452]	664	0.538318395614624	0.2679893	No	
+row_10	H2AZ1	H2A.Z variant histone 1 [Source:HGNC Symbol;Acc:HGNC:4741]	678	0.5307551622390747	0.28138557	No	
+row_11	TMEM154	transmembrane protein 154 [Source:HGNC Symbol;Acc:HGNC:26489]	774	0.47310754656791687	0.2621797	No	
+row_12	KIAA0232	KIAA0232 [Source:HGNC Symbol;Acc:HGNC:28992]	991	0.38596299290657043	0.1947943	No	
+row_13	ELOVL6	ELOVL fatty acid elongase 6 [Source:HGNC Symbol;Acc:HGNC:15829]	1020	0.37440016865730286	0.19721292	No	
+row_14	ANTKMT	adenine nucleotide translocase lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:14152]	1064	0.3582405745983124	0.19347468	No	
+row_15	PLEKHO1	pleckstrin homology domain containing O1 [Source:HGNC Symbol;Acc:HGNC:24310]	1112	0.342556357383728	0.18770348	No	
+row_16	IDE	insulin degrading enzyme [Source:HGNC Symbol;Acc:HGNC:5381]	1123	0.33750221133232117	0.19557476	No	
+row_17	DDOST	dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunit [Source:HGNC Symbol;Acc:HGNC:2728]	1176	0.3212929964065552	0.18720533	No	
+row_18	YPEL2	yippee like 2 [Source:HGNC Symbol;Acc:HGNC:18326]	1252	0.30150166153907776	0.16956684	No	
+row_19	DBI	diazepam binding inhibitor, acyl-CoA binding protein [Source:HGNC Symbol;Acc:HGNC:2690]	1302	0.2896955609321594	0.16123113	No	
+row_20	DOT1L	DOT1 like histone lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:24948]	1318	0.28680211305618286	0.16549197	No	
+row_21	CDIPT	CDP-diacylglycerol--inositol 3-phosphatidyltransferase [Source:HGNC Symbol;Acc:HGNC:1769]	1320	0.2863520383834839	0.1749651	No	
+row_22	WDR83OS	WD repeat domain 83 opposite strand [Source:HGNC Symbol;Acc:HGNC:30203]	1407	0.265597403049469	0.15198447	No	
+row_23	RBM25	RNA binding motif protein 25 [Source:HGNC Symbol;Acc:HGNC:23244]	1625	-0.2803841531276703	0.08059519	No	
+row_24	DRG1	developmentally regulated GTP binding protein 1 [Source:HGNC Symbol;Acc:HGNC:3029]	1704	-0.2968522906303406	0.061676588	No	
+row_25	TTC28	tetratricopeptide repeat domain 28 [Source:HGNC Symbol;Acc:HGNC:29179]	1715	-0.29766905307769775	0.06817816	No	
+row_26	CDON	cell adhesion associated, oncogene regulated [Source:HGNC Symbol;Acc:HGNC:17104]	1763	-0.3095738887786865	0.061272815	No	
+row_27	SCD	stearoyl-CoA desaturase [Source:HGNC Symbol;Acc:HGNC:10571]	1795	-0.31650590896606445	0.06058044	No	
+row_28	ZNRF3	zinc and ring finger 3 [Source:HGNC Symbol;Acc:HGNC:18126]	2067	-0.4168468415737152	-0.02628071	No	
+row_29	CBL	Cbl proto-oncogene [Source:HGNC Symbol;Acc:HGNC:1541]	2190	-0.47612032294273376	-0.055465136	No	
+row_30	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	2215	-0.4888506233692169	-0.047617342	No	
+row_31	MBD5	methyl-CpG binding domain protein 5 [Source:HGNC Symbol;Acc:HGNC:20444]	2353	-0.5912067294120789	-0.07844558	No	
+row_32	HSD11B1	hydroxysteroid 11-beta dehydrogenase 1 [Source:HGNC Symbol;Acc:HGNC:5208]	2392	-0.6306842565536499	-0.07094845	No	
+row_33	DIAPH2	diaphanous related formin 2 [Source:HGNC Symbol;Acc:HGNC:2877]	2394	-0.6323352456092834	-0.04957827	No	
+row_34	HSP90AA1	heat shock protein 90 alpha family class A member 1 [Source:HGNC Symbol;Acc:HGNC:5253]	2472	-0.7408334612846375	-0.05285664	No	
+row_35	SLC44A2	solute carrier family 44 member 2 [Source:HGNC Symbol;Acc:HGNC:17292]	2476	-0.7444917559623718	-0.02837665	No	
+row_36	KLF2	KLF transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:6347]	2647	-1.2780839204788208	-0.047908433	No	
+row_37	BCL2	BCL2 apoptosis regulator [Source:HGNC Symbol;Acc:HGNC:990]	2707	-2.120821714401245	0.002987161	No	

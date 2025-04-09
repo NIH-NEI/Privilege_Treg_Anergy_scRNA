@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	PLAC8	placenta associated 8 [Source:HGNC Symbol;Acc:HGNC:19254]	37	2.1165945529937744	0.06945617	No	
+row_1	HIF1A	hypoxia inducible factor 1 subunit alpha [Source:HGNC Symbol;Acc:HGNC:4910]	62	1.8010660409927368	0.13152938	No	
+row_2	MXI1	MAX interactor 1, dimerization protein [Source:HGNC Symbol;Acc:HGNC:7534]	64	1.7708250284194946	0.20153096	No	
+row_3	RAB43	RAB43, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:19983]	100	1.488889455795288	0.24682689	No	
+row_4	PMEPA1	prostate transmembrane protein, androgen induced 1 [Source:HGNC Symbol;Acc:HGNC:14107]	188	1.1151005029678345	0.25661984	No	
+row_5	PDE4D	phosphodiesterase 4D [Source:HGNC Symbol;Acc:HGNC:8783]	247	0.9642353653907776	0.27192768	No	
+row_6	RAPH1	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1 [Source:HGNC Symbol;Acc:HGNC:14436]	280	0.8748274445533752	0.2940027	No	
+row_7	TNFAIP8	TNF alpha induced protein 8 [Source:HGNC Symbol;Acc:HGNC:17260]	711	0.47404566407203674	0.14214559	No	
+row_8	LGALS3BP	galectin 3 binding protein [Source:HGNC Symbol;Acc:HGNC:6564]	805	0.42401641607284546	0.122082815	No	
+row_9	SNTB1	syntrophin beta 1 [Source:HGNC Symbol;Acc:HGNC:11168]	1016	0.3497884273529053	0.05262212	No	
+row_10	CPLANE1	ciliogenesis and planar polarity effector complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:25801]	1110	0.317717045545578	0.028333446	No	
+row_11	ATP1A1	ATPase Na+/K+ transporting subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:799]	1177	0.30040016770362854	0.014074884	No	
+row_12	ATP6V1G2	ATPase H+ transporting V1 subunit G2 [Source:HGNC Symbol;Acc:HGNC:862]	1199	0.2956233024597168	0.017490651	No	
+row_13	CHMP4B	charged multivesicular body protein 4B [Source:HGNC Symbol;Acc:HGNC:16171]	1403	0.2533857524394989	-0.053023618	No	
+row_14	UQCC1	ubiquinol-cytochrome c reductase complex assembly factor 1 [Source:HGNC Symbol;Acc:HGNC:15891]	1534	-0.27543044090270996	-0.09368175	No	
+row_15	ORC5	origin recognition complex subunit 5 [Source:HGNC Symbol;Acc:HGNC:8491]	1684	-0.3097843825817108	-0.14051683	No	
+row_16	METTL16	methyltransferase 16, N6-methyladenosine [Source:HGNC Symbol;Acc:HGNC:28484]	1736	-0.3256109654903412	-0.1478184	No	
+row_17	FHIT	fragile histidine triad diadenosine triphosphatase [Source:HGNC Symbol;Acc:HGNC:3701]	1931	-0.4040856957435608	-0.2087688	No	
+row_18	LRP6	LDL receptor related protein 6 [Source:HGNC Symbol;Acc:HGNC:6698]	2008	-0.4489699602127075	-0.22109084	No	
+row_19	KLHDC1	kelch domain containing 1 [Source:HGNC Symbol;Acc:HGNC:19836]	2083	-0.49125710129737854	-0.23093781	No	
+row_20	TMEM131L	transmembrane 131 like [Source:HGNC Symbol;Acc:HGNC:29146]	2318	-0.733813464641571	-0.2946593	Yes	
+row_21	SPTBN1	spectrin beta, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11275]	2360	-0.8187875151634216	-0.27838495	Yes	
+row_22	RPS20	ribosomal protein S20 [Source:HGNC Symbol;Acc:HGNC:10405]	2385	-0.8674862384796143	-0.25342593	Yes	
+row_23	TMEM71	transmembrane protein 71 [Source:HGNC Symbol;Acc:HGNC:26572]	2431	-0.9996971487998962	-0.23154752	Yes	
+row_24	SSBP2	single stranded DNA binding protein 2 [Source:HGNC Symbol;Acc:HGNC:15831]	2448	-1.0664602518081665	-0.19550246	Yes	
+row_25	MLLT3	MLLT3 super elongation complex subunit [Source:HGNC Symbol;Acc:HGNC:7136]	2502	-1.4292664527893066	-0.15972252	Yes	
+row_26	RIPOR2	RHO family interacting cell polarization regulator 2 [Source:HGNC Symbol;Acc:HGNC:13872]	2533	-1.974208116531372	-0.09314801	Yes	
+row_27	LEF1	lymphoid enhancer binding factor 1 [Source:HGNC Symbol;Acc:HGNC:6551]	2544	-2.4628984928131104	7.938976E-4	Yes	

@@ -1,0 +1,50 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ARL5A	ADP ribosylation factor like GTPase 5A [Source:HGNC Symbol;Acc:HGNC:696]	74	1.7327958345413208	0.035330307	No	
+row_1	SNX2	sorting nexin 2 [Source:HGNC Symbol;Acc:HGNC:11173]	175	1.1640900373458862	0.040209934	No	
+row_2	PTPN22	protein tyrosine phosphatase non-receptor type 22 [Source:HGNC Symbol;Acc:HGNC:9652]	180	1.1515388488769531	0.08062818	No	
+row_3	ARPC5	actin related protein 2/3 complex subunit 5 [Source:HGNC Symbol;Acc:HGNC:708]	552	0.6287609338760376	-0.03559142	No	
+row_4	FUT8	fucosyltransferase 8 [Source:HGNC Symbol;Acc:HGNC:4019]	614	0.5768318772315979	-0.03746586	No	
+row_5	NAB1	NGFI-A binding protein 1 [Source:HGNC Symbol;Acc:HGNC:7626]	638	0.5579210519790649	-0.025780465	No	
+row_6	TAX1BP1	Tax1 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:11575]	661	0.5391591787338257	-0.014403085	No	
+row_7	RPL38	ribosomal protein L38 [Source:HGNC Symbol;Acc:HGNC:10349]	676	0.5309503674507141	-3.2489604E-4	No	
+row_8	UPF3B	UPF3B regulator of nonsense mediated mRNA decay [Source:HGNC Symbol;Acc:HGNC:20439]	681	0.5276056528091431	0.017381072	No	
+row_9	TP53INP1	tumor protein p53 inducible nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:18022]	771	0.47433656454086304	0.0012769355	No	
+row_10	ELOVL5	ELOVL fatty acid elongase 5 [Source:HGNC Symbol;Acc:HGNC:21308]	826	0.4483887553215027	-0.0026483876	No	
+row_11	CD48	CD48 molecule [Source:HGNC Symbol;Acc:HGNC:1683]	1084	0.35115331411361694	-0.086228736	No	
+row_12	SYAP1	synapse associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16273]	1155	0.3287937343120575	-0.10050678	No	
+row_13	MDP1	magnesium dependent phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:28781]	1312	0.2877722680568695	-0.14852405	No	
+row_14	AKIRIN1	akirin 1 [Source:HGNC Symbol;Acc:HGNC:25744]	1356	0.27703574299812317	-0.15456244	No	
+row_15	ZC3H15	zinc finger CCCH-type containing 15 [Source:HGNC Symbol;Acc:HGNC:29528]	1430	0.2600991427898407	-0.17246595	No	
+row_16	ZBTB11	zinc finger and BTB domain containing 11 [Source:HGNC Symbol;Acc:HGNC:16740]	1495	-0.2529959976673126	-0.18725345	No	
+row_17	PTPN12	protein tyrosine phosphatase non-receptor type 12 [Source:HGNC Symbol;Acc:HGNC:9645]	1502	-0.25414296984672546	-0.18025191	No	
+row_18	ITCH	itchy E3 ubiquitin protein ligase [Source:HGNC Symbol;Acc:HGNC:13890]	1668	-0.2894391715526581	-0.23158307	No	
+row_19	TESC	tescalcin [Source:HGNC Symbol;Acc:HGNC:26065]	1688	-0.29329246282577515	-0.22803082	No	
+row_20	KIZ	kizuna centrosomal protein [Source:HGNC Symbol;Acc:HGNC:15865]	1698	-0.2960487902164459	-0.2206287	No	
+row_21	RPS6KB1	ribosomal protein S6 kinase B1 [Source:HGNC Symbol;Acc:HGNC:10436]	1699	-0.29615241289138794	-0.20984823	No	
+row_22	PDPK1	3-phosphoinositide dependent protein kinase 1 [Source:HGNC Symbol;Acc:HGNC:8816]	1730	-0.3033384382724762	-0.21005476	No	
+row_23	CELSR1	cadherin EGF LAG seven-pass G-type receptor 1 [Source:HGNC Symbol;Acc:HGNC:1850]	1785	-0.3149840533733368	-0.21883625	No	
+row_24	GUCD1	guanylyl cyclase domain containing 1 [Source:HGNC Symbol;Acc:HGNC:14237]	1903	-0.34991902112960815	-0.2499681	No	
+row_25	CASP8	caspase 8 [Source:HGNC Symbol;Acc:HGNC:1509]	1924	-0.35606709122657776	-0.24450569	No	
+row_26	CHORDC1	cysteine and histidine rich domain containing 1 [Source:HGNC Symbol;Acc:HGNC:14525]	1926	-0.356580913066864	-0.23190047	No	
+row_27	ZFP1	ZFP1 zinc finger protein [Source:HGNC Symbol;Acc:HGNC:23328]	2052	-0.41017723083496094	-0.2638384	No	
+row_28	OSBPL8	oxysterol binding protein like 8 [Source:HGNC Symbol;Acc:HGNC:16396]	2115	-0.43947356939315796	-0.2710879	Yes	
+row_29	SFMBT2	Scm like with four mbt domains 2 [Source:HGNC Symbol;Acc:HGNC:20256]	2122	-0.44271352887153625	-0.25722206	Yes	
+row_30	MSRA	methionine sulfoxide reductase A [Source:HGNC Symbol;Acc:HGNC:7377]	2136	-0.4476831257343292	-0.2458	Yes	
+row_31	MTSS1	MTSS I-BAR domain containing 1 [Source:HGNC Symbol;Acc:HGNC:20443]	2149	-0.45551973581314087	-0.23371771	Yes	
+row_32	NFE2L2	NFE2 like bZIP transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:7782]	2151	-0.45828038454055786	-0.21741045	Yes	
+row_33	RPL18A	ribosomal protein L18a [Source:HGNC Symbol;Acc:HGNC:10311]	2161	-0.4621025621891022	-0.20396367	Yes	
+row_34	RAPGEF1	Rap guanine nucleotide exchange factor 1 [Source:HGNC Symbol;Acc:HGNC:4568]	2165	-0.4651487171649933	-0.18815629	Yes	
+row_35	RPS3	ribosomal protein S3 [Source:HGNC Symbol;Acc:HGNC:10420]	2251	-0.5184963941574097	-0.20115313	Yes	
+row_36	TSPAN13	tetraspanin 13 [Source:HGNC Symbol;Acc:HGNC:21643]	2268	-0.5324894785881042	-0.18776882	Yes	
+row_37	SUSD6	sushi domain containing 6 [Source:HGNC Symbol;Acc:HGNC:19956]	2317	-0.5607851147651672	-0.185353	Yes	
+row_38	GIGYF2	GRB10 interacting GYF protein 2 [Source:HGNC Symbol;Acc:HGNC:11960]	2329	-0.569439172744751	-0.16874889	Yes	
+row_39	PARP14	poly(ADP-ribose) polymerase family member 14 [Source:HGNC Symbol;Acc:HGNC:29232]	2348	-0.5880144834518433	-0.15409328	Yes	
+row_40	TMEM245	transmembrane protein 245 [Source:HGNC Symbol;Acc:HGNC:1363]	2407	-0.6453648209571838	-0.15234813	Yes	
+row_41	MORC3	MORC family CW-type zinc finger 3 [Source:HGNC Symbol;Acc:HGNC:23572]	2416	-0.657175600528717	-0.1314254	Yes	
+row_42	ARHGEF1	Rho guanine nucleotide exchange factor 1 [Source:HGNC Symbol;Acc:HGNC:681]	2444	-0.6936559081077576	-0.11629883	Yes	
+row_43	XRCC4	X-ray repair cross complementing 4 [Source:HGNC Symbol;Acc:HGNC:12831]	2496	-0.7694309949874878	-0.10741279	Yes	
+row_44	CTSE	cathepsin E [Source:HGNC Symbol;Acc:HGNC:2530]	2497	-0.7720400094985962	-0.079309165	Yes	
+row_45	MED13L	mediator complex subunit 13L [Source:HGNC Symbol;Acc:HGNC:22962]	2526	-0.8255841135978699	-0.05975513	Yes	
+row_46	TCF12	transcription factor 12 [Source:HGNC Symbol;Acc:HGNC:11623]	2568	-0.9420071840286255	-0.040837478	Yes	
+row_47	CERS6	ceramide synthase 6 [Source:HGNC Symbol;Acc:HGNC:23826]	2643	-1.2318423986434937	-0.023742765	Yes	
+row_48	PARP8	poly(ADP-ribose) polymerase family member 8 [Source:HGNC Symbol;Acc:HGNC:26124]	2666	-1.3835736513137817	0.018372798	Yes	

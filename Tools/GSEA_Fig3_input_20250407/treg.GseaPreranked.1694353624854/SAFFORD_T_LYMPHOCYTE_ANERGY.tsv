@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	LAG3	lymphocyte activating 3 [Source:HGNC Symbol;Acc:HGNC:6476]	9	2.9728729724884033	0.0822398	Yes	
+row_1	SRGN	serglycin [Source:HGNC Symbol;Acc:HGNC:9361]	17	2.6155166625976562	0.15493624	Yes	
+row_2	TNFRSF4	TNF receptor superfamily member 4 [Source:HGNC Symbol;Acc:HGNC:11918]	28	2.334975004196167	0.21843672	Yes	
+row_3	GADD45B	growth arrest and DNA damage inducible beta [Source:HGNC Symbol;Acc:HGNC:4096]	55	1.9220138788223267	0.26408145	Yes	
+row_4	MMD	monocyte to macrophage differentiation associated [Source:HGNC Symbol;Acc:HGNC:7153]	88	1.564021348953247	0.29718164	Yes	
+row_5	NR4A2	nuclear receptor subfamily 4 group A member 2 [Source:HGNC Symbol;Acc:HGNC:7981]	96	1.530449390411377	0.33863664	Yes	
+row_6	STX11	syntaxin 11 [Source:HGNC Symbol;Acc:HGNC:11429]	99	1.494826316833496	0.38093022	Yes	
+row_7	CCL3	C-C motif chemokine ligand 3 [Source:HGNC Symbol;Acc:HGNC:10627]	134	1.3153959512710571	0.40612623	Yes	
+row_8	FURIN	furin, paired basic amino acid cleaving enzyme [Source:HGNC Symbol;Acc:HGNC:8568]	140	1.2834950685501099	0.4412166	Yes	
+row_9	NDRG1	N-myc downstream regulated 1 [Source:HGNC Symbol;Acc:HGNC:7679]	155	1.2476699352264404	0.47191975	Yes	
+row_10	MYO1E	myosin IE [Source:HGNC Symbol;Acc:HGNC:7599]	183	1.1443133354187012	0.4947999	Yes	
+row_11	ANGPTL2	angiopoietin like 2 [Source:HGNC Symbol;Acc:HGNC:490]	191	1.124942421913147	0.52457947	Yes	
+row_12	NR4A3	nuclear receptor subfamily 4 group A member 3 [Source:HGNC Symbol;Acc:HGNC:7982]	195	1.1185461282730103	0.55566627	Yes	
+row_13	CDC14A	cell division cycle 14A [Source:HGNC Symbol;Acc:HGNC:1718]	302	0.8967540860176086	0.54196304	No	
+row_14	PFKP	phosphofructokinase, platelet [Source:HGNC Symbol;Acc:HGNC:8878]	446	0.718551754951477	0.5093333	No	
+row_15	NFATC1	nuclear factor of activated T cells 1 [Source:HGNC Symbol;Acc:HGNC:7775]	535	0.638546884059906	0.49490714	No	
+row_16	F2R	coagulation factor II thrombin receptor [Source:HGNC Symbol;Acc:HGNC:3537]	603	0.5812698602676392	0.48666182	No	
+row_17	IRF4	interferon regulatory factor 4 [Source:HGNC Symbol;Acc:HGNC:6119]	633	0.5619348883628845	0.49202833	No	
+row_18	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	772	0.47401222586631775	0.45422202	No	
+row_19	ADORA2A	adenosine A2a receptor [Source:HGNC Symbol;Acc:HGNC:263]	787	0.46389517188072205	0.4623586	No	
+row_20	TNFSF11	TNF superfamily member 11 [Source:HGNC Symbol;Acc:HGNC:11926]	841	0.4423970878124237	0.4553348	No	
+row_21	JARID2	jumonji and AT-rich interaction domain containing 2 [Source:HGNC Symbol;Acc:HGNC:6196]	932	0.41092827916145325	0.43360928	No	
+row_22	GCH1	GTP cyclohydrolase 1 [Source:HGNC Symbol;Acc:HGNC:4193]	1077	0.35350513458251953	0.3900962	No	
+row_23	JAK3	Janus kinase 3 [Source:HGNC Symbol;Acc:HGNC:6193]	1111	0.34261295199394226	0.3876565	No	
+row_24	MYO1C	myosin IC [Source:HGNC Symbol;Acc:HGNC:7597]	1158	0.32707369327545166	0.3799223	No	
+row_25	CSF1	colony stimulating factor 1 [Source:HGNC Symbol;Acc:HGNC:2432]	1347	0.27869856357574463	0.3178497	No	
+row_26	ANP32A	acidic nuclear phosphoprotein 32 family member A [Source:HGNC Symbol;Acc:HGNC:13233]	1386	0.27162784337997437	0.31150192	No	
+row_27	FYN	FYN proto-oncogene, Src family tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:4037]	1484	-0.2508310079574585	0.28255686	No	
+row_28	RNF19A	ring finger protein 19A, RBR E3 ubiquitin protein ligase [Source:HGNC Symbol;Acc:HGNC:13432]	2089	-0.4257632791996002	0.069610454	No	
+row_29	RCBTB1	RCC1 and BTB domain containing protein 1 [Source:HGNC Symbol;Acc:HGNC:18243]	2318	-0.5610820651054382	7.540466E-4	No	
+row_30	ANKRD28	ankyrin repeat domain 28 [Source:HGNC Symbol;Acc:HGNC:29024]	2344	-0.5839827060699463	0.008246781	No	
+row_31	CTSE	cathepsin E [Source:HGNC Symbol;Acc:HGNC:2530]	2497	-0.7720400094985962	-0.026198624	No	
+row_32	CD40LG	CD40 ligand [Source:HGNC Symbol;Acc:HGNC:11935]	2594	-1.0159549713134766	-0.032741245	No	
+row_33	FOXP1	forkhead box P1 [Source:HGNC Symbol;Acc:HGNC:3823]	2711	-2.691145420074463	0.0014914046	No	

@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ICOS	inducible T cell costimulator [Source:HGNC Symbol;Acc:HGNC:5351]	33	2.153756618499756	0.06657823	Yes	
+row_1	RAMP1	receptor activity modifying protein 1 [Source:HGNC Symbol;Acc:HGNC:9843]	50	1.9166971445083618	0.13114779	Yes	
+row_2	MAPKAPK3	MAPK activated protein kinase 3 [Source:HGNC Symbol;Acc:HGNC:6888]	54	1.8447080850601196	0.19822614	Yes	
+row_3	NFKBIA	NFKB inhibitor alpha [Source:HGNC Symbol;Acc:HGNC:7797]	101	1.4823511838912964	0.23478273	Yes	
+row_4	ARF4	ADP ribosylation factor 4 [Source:HGNC Symbol;Acc:HGNC:655]	142	1.2743264436721802	0.266028	Yes	
+row_5	S100A13	S100 calcium binding protein A13 [Source:HGNC Symbol;Acc:HGNC:10490]	173	1.1590789556503296	0.29698727	Yes	
+row_6	PHLDA1	pleckstrin homology like domain family A member 1 [Source:HGNC Symbol;Acc:HGNC:8933]	185	1.1245157718658447	0.33422804	Yes	
+row_7	DUSP1	dual specificity phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:3064]	205	1.0565245151519775	0.36576903	Yes	
+row_8	LTB	lymphotoxin beta [Source:HGNC Symbol;Acc:HGNC:6711]	359	0.742396354675293	0.33236152	No	
+row_9	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	484	0.6265308260917664	0.30620584	No	
+row_10	GABARAP	GABA type A receptor-associated protein [Source:HGNC Symbol;Acc:HGNC:4067]	568	0.5674087405204773	0.29417723	No	
+row_11	CCR4	C-C motif chemokine receptor 4 [Source:HGNC Symbol;Acc:HGNC:1605]	628	0.5294391512870789	0.29029372	No	
+row_12	ACOT7	acyl-CoA thioesterase 7 [Source:HGNC Symbol;Acc:HGNC:24157]	680	0.4897248446941376	0.28812385	No	
+row_13	MYO16	myosin XVI [Source:HGNC Symbol;Acc:HGNC:29822]	895	0.395699143409729	0.21761137	No	
+row_14	LRIG1	leucine rich repeats and immunoglobulin like domains 1 [Source:HGNC Symbol;Acc:HGNC:17360]	1012	0.3509252965450287	0.18443905	No	
+row_15	SOD1	superoxide dismutase 1 [Source:HGNC Symbol;Acc:HGNC:11179]	1168	0.30272671580314636	0.13396361	No	
+row_16	AFG1L	AFG1 like ATPase [Source:HGNC Symbol;Acc:HGNC:16411]	1563	-0.2821962535381317	-0.012377103	No	
+row_17	BCL9L	BCL9 like [Source:HGNC Symbol;Acc:HGNC:23688]	1577	-0.28525516390800476	-0.0069929864	No	
+row_18	IZUMO1R	IZUMO1 receptor, JUNO [Source:HGNC Symbol;Acc:HGNC:32565]	1595	-0.2875864505767822	-0.0031143131	No	
+row_19	ASXL1	ASXL transcriptional regulator 1 [Source:HGNC Symbol;Acc:HGNC:18318]	1680	-0.3075503706932068	-0.02515814	No	
+row_20	ZC3H12D	zinc finger CCCH-type containing 12D [Source:HGNC Symbol;Acc:HGNC:21175]	1781	-0.34374308586120605	-0.05222938	No	
+row_21	SORCS2	sortilin related VPS10 domain containing receptor 2 [Source:HGNC Symbol;Acc:HGNC:16698]	1788	-0.34536153078079224	-0.041835226	No	
+row_22	CHD8	chromodomain helicase DNA binding protein 8 [Source:HGNC Symbol;Acc:HGNC:20153]	1790	-0.3460240364074707	-0.029426903	No	
+row_23	PECAM1	platelet and endothelial cell adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:8823]	1892	-0.38547465205192566	-0.055351596	No	
+row_24	VAMP1	vesicle associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:12642]	1928	-0.4026690721511841	-0.0543765	No	
+row_25	RESF1	retroelement silencing factor 1 [Source:HGNC Symbol;Acc:HGNC:25559]	2096	-0.4972599148750305	-0.10242748	No	
+row_26	HSPBAP1	HSPB1 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16389]	2140	-0.5295636057853699	-0.0999395	No	
+row_27	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	2166	-0.5524700284004211	-0.089441	No	
+row_28	KAT2B	lysine acetyltransferase 2B [Source:HGNC Symbol;Acc:HGNC:8638]	2362	-0.8196032643318176	-0.1367042	No	
+row_29	CD2AP	CD2 associated protein [Source:HGNC Symbol;Acc:HGNC:14258]	2368	-0.8363884091377258	-0.10773935	No	
+row_30	CCND2	cyclin D2 [Source:HGNC Symbol;Acc:HGNC:1583]	2423	-0.9678747653961182	-0.09340683	No	
+row_31	SH3PXD2A	SH3 and PX domains 2A [Source:HGNC Symbol;Acc:HGNC:23664]	2426	-0.9750592708587646	-0.058116015	No	
+row_32	RAPGEF6	Rap guanine nucleotide exchange factor 6 [Source:HGNC Symbol;Acc:HGNC:20655]	2461	-1.1478688716888428	-0.029163346	No	
+row_33	SMC4	structural maintenance of chromosomes 4 [Source:HGNC Symbol;Acc:HGNC:14013]	2520	-1.6911647319793701	0.010346219	No	

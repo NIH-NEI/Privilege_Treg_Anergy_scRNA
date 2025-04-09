@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	RORA	RAR related orphan receptor A [Source:HGNC Symbol;Acc:HGNC:10258]	4	2.6534276008605957	0.10880573	Yes	
+row_1	MAF	MAF bZIP transcription factor [Source:HGNC Symbol;Acc:HGNC:6776]	7	2.5619735717773438	0.21469486	Yes	
+row_2	IL18R1	interleukin 18 receptor 1 [Source:HGNC Symbol;Acc:HGNC:5988]	14	2.4109270572662354	0.3124978	Yes	
+row_3	CCR6	C-C motif chemokine receptor 6 [Source:HGNC Symbol;Acc:HGNC:1607]	46	1.6999322175979614	0.3694754	Yes	
+row_4	TOX	thymocyte selection associated high mobility group box [Source:HGNC Symbol;Acc:HGNC:18988]	145	1.0906562805175781	0.37106702	Yes	
+row_5	HIP1	huntingtin interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:4913]	215	0.8880471587181091	0.37719497	Yes	
+row_6	NTRK3	neurotrophic receptor tyrosine kinase 3 [Source:HGNC Symbol;Acc:HGNC:8033]	219	0.878014087677002	0.41244817	Yes	
+row_7	CD83	CD83 molecule [Source:HGNC Symbol;Acc:HGNC:1703]	250	0.8414942622184753	0.43409327	Yes	
+row_8	VAX2	ventral anterior homeobox 2 [Source:HGNC Symbol;Acc:HGNC:12661]	326	0.7244425415992737	0.43071634	Yes	
+row_9	ATAD2	ATPase family AAA domain containing 2 [Source:HGNC Symbol;Acc:HGNC:30123]	380	0.6637129187583923	0.434656	Yes	
+row_10	RAC2	Rac family small GTPase 2 [Source:HGNC Symbol;Acc:HGNC:9802]	437	0.5981897711753845	0.4345217	No	
+row_11	MYO1G	myosin IG [Source:HGNC Symbol;Acc:HGNC:13880]	665	0.4463465213775635	0.3515142	No	
+row_12	ABHD2	abhydrolase domain containing 2, acylglycerol lipase [Source:HGNC Symbol;Acc:HGNC:18717]	672	0.4447465240955353	0.3673657	No	
+row_13	TBCB	tubulin folding cofactor B [Source:HGNC Symbol;Acc:HGNC:1989]	767	0.4045734107494354	0.34215155	No	
+row_14	CXCR3	C-X-C motif chemokine receptor 3 [Source:HGNC Symbol;Acc:HGNC:4540]	831	0.37817081809043884	0.32971334	No	
+row_15	NABP1	nucleic acid binding protein 1 [Source:HGNC Symbol;Acc:HGNC:26232]	999	0.32677316665649414	0.26857963	No	
+row_16	STX6	syntaxin 6 [Source:HGNC Symbol;Acc:HGNC:11441]	1052	0.3103824853897095	0.2582399	No	
+row_17	KIF15	kinesin family member 15 [Source:HGNC Symbol;Acc:HGNC:17273]	1088	0.3010312616825104	0.25512007	No	
+row_18	HSPA8	heat shock protein family A (Hsp70) member 8 [Source:HGNC Symbol;Acc:HGNC:5241]	1589	-0.3236429989337921	0.0447959	No	
+row_19	ISG20	interferon stimulated exonuclease gene 20 [Source:HGNC Symbol;Acc:HGNC:6130]	1912	-0.5024455189704895	-0.07839798	No	
+row_20	MAN1A2	mannosidase alpha class 1A member 2 [Source:HGNC Symbol;Acc:HGNC:6822]	1920	-0.5072716474533081	-0.060388032	No	
+row_21	DENND1B	DENN domain containing 1B [Source:HGNC Symbol;Acc:HGNC:28404]	1944	-0.5270034074783325	-0.04871769	No	
+row_22	TRIM14	tripartite motif containing 14 [Source:HGNC Symbol;Acc:HGNC:16283]	1948	-0.5285279154777527	-0.028031254	No	
+row_23	ABCG2	ATP binding cassette subfamily G member 2 (Junior blood group) [Source:HGNC Symbol;Acc:HGNC:74]	1978	-0.5545861124992371	-0.017897017	No	
+row_24	CASP8	caspase 8 [Source:HGNC Symbol;Acc:HGNC:1509]	2084	-0.71650630235672	-0.035033558	No	
+row_25	SIPA1L1	signal induced proliferation associated 1 like 1 [Source:HGNC Symbol;Acc:HGNC:20284]	2146	-0.8826804161071777	-0.025548259	No	
+row_26	IQGAP2	IQ motif containing GTPase activating protein 2 [Source:HGNC Symbol;Acc:HGNC:6111]	2151	-0.9002883434295654	0.010185715	No	
+row_27	SMC6	structural maintenance of chromosomes 6 [Source:HGNC Symbol;Acc:HGNC:20466]	2161	-0.9262283444404602	0.044762745	No	

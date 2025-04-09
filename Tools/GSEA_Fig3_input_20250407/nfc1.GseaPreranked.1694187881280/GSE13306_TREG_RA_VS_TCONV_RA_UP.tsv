@@ -1,0 +1,31 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	S100A4	S100 calcium binding protein A4 [Source:HGNC Symbol;Acc:HGNC:10494]	2	2.7487287521362305	0.13737847	Yes	
+row_1	MDFIC	MyoD family inhibitor domain containing [Source:HGNC Symbol;Acc:HGNC:28870]	101	1.2762974500656128	0.15767567	Yes	
+row_2	H2AZ1	H2A.Z variant histone 1 [Source:HGNC Symbol;Acc:HGNC:4741]	159	1.0489740371704102	0.18490657	Yes	
+row_3	CD80	CD80 molecule [Source:HGNC Symbol;Acc:HGNC:1700]	224	0.8711602687835693	0.20005636	Yes	
+row_4	PLEKHO1	pleckstrin homology domain containing O1 [Source:HGNC Symbol;Acc:HGNC:24310]	261	0.8264773488044739	0.22550318	Yes	
+row_5	PTPN11	protein tyrosine phosphatase non-receptor type 11 [Source:HGNC Symbol;Acc:HGNC:9644]	283	0.7922914028167725	0.25595072	Yes	
+row_6	IKZF2	IKAROS family zinc finger 2 [Source:HGNC Symbol;Acc:HGNC:13177]	307	0.7571716904640198	0.28373548	Yes	
+row_7	SOCS2	suppressor of cytokine signaling 2 [Source:HGNC Symbol;Acc:HGNC:19382]	613	0.4700573682785034	0.17073295	No	
+row_8	HNRNPL	heterogeneous nuclear ribonucleoprotein L [Source:HGNC Symbol;Acc:HGNC:5045]	660	0.44839152693748474	0.17267992	No	
+row_9	GOLPH3	golgi phosphoprotein 3 [Source:HGNC Symbol;Acc:HGNC:15452]	796	0.39343222975730896	0.1319876	No	
+row_10	DBI	diazepam binding inhibitor, acyl-CoA binding protein [Source:HGNC Symbol;Acc:HGNC:2690]	866	0.3662969470024109	0.11950016	No	
+row_11	YPEL2	yippee like 2 [Source:HGNC Symbol;Acc:HGNC:18326]	877	0.3614180386066437	0.13320097	No	
+row_12	MAST2	microtubule associated serine/threonine kinase 2 [Source:HGNC Symbol;Acc:HGNC:19035]	891	0.3592224717140198	0.14544724	No	
+row_13	DOT1L	DOT1 like histone lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:24948]	915	0.3505167067050934	0.15277529	No	
+row_14	MAP4	microtubule associated protein 4 [Source:HGNC Symbol;Acc:HGNC:6862]	1028	0.31825101375579834	0.118605666	No	
+row_15	SLC12A2	solute carrier family 12 member 2 [Source:HGNC Symbol;Acc:HGNC:10911]	1294	0.25439855456352234	0.01267556	No	
+row_16	VAMP1	vesicle associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:12642]	1424	-0.27729105949401855	-0.03117104	No	
+row_17	DIAPH2	diaphanous related formin 2 [Source:HGNC Symbol;Acc:HGNC:2877]	1538	-0.308141827583313	-0.06629724	No	
+row_18	HSP90AA1	heat shock protein 90 alpha family class A member 1 [Source:HGNC Symbol;Acc:HGNC:5253]	1554	-0.31500372290611267	-0.057171438	No	
+row_19	CCDC88C	coiled-coil domain containing 88C [Source:HGNC Symbol;Acc:HGNC:19967]	1562	-0.3167937397956848	-0.044371363	No	
+row_20	TMEM154	transmembrane protein 154 [Source:HGNC Symbol;Acc:HGNC:26489]	1592	-0.3248387575149536	-0.041023213	No	
+row_21	MBD5	methyl-CpG binding domain protein 5 [Source:HGNC Symbol;Acc:HGNC:20444]	1637	-0.3493135869503021	-0.04316429	No	
+row_22	BCL2	BCL2 apoptosis regulator [Source:HGNC Symbol;Acc:HGNC:990]	1686	-0.37017151713371277	-0.046048228	No	
+row_23	TXK	TXK tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:12434]	1750	-0.3978644013404846	-0.054259505	No	
+row_24	KANSL1L	KAT8 regulatory NSL complex subunit 1 like [Source:HGNC Symbol;Acc:HGNC:26310]	1982	-0.5583092570304871	-0.12966844	No	
+row_25	SLC44A2	solute carrier family 44 member 2 [Source:HGNC Symbol;Acc:HGNC:17292]	2052	-0.6549778580665588	-0.12763382	No	
+row_26	CBL	Cbl proto-oncogene [Source:HGNC Symbol;Acc:HGNC:1541]	2071	-0.6941240429878235	-0.1007805	No	
+row_27	KLF2	KLF transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:6347]	2200	-1.1176468133926392	-0.10190506	No	
+row_28	ZNRF3	zinc and ring finger 3 [Source:HGNC Symbol;Acc:HGNC:18126]	2215	-1.2698349952697754	-0.04429855	No	
+row_29	HSD11B1	hydroxysteroid 11-beta dehydrogenase 1 [Source:HGNC Symbol;Acc:HGNC:5208]	2217	-1.281384825706482	0.019713359	No	

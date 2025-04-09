@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	HIF1A	hypoxia inducible factor 1 subunit alpha [Source:HGNC Symbol;Acc:HGNC:4910]	16	2.2124111652374268	0.09343152	Yes	
+row_1	MXI1	MAX interactor 1, dimerization protein [Source:HGNC Symbol;Acc:HGNC:7534]	80	1.3948028087615967	0.12864965	Yes	
+row_2	RAB43	RAB43, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:19983]	104	1.25916588306427	0.17560577	Yes	
+row_3	RAPH1	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1 [Source:HGNC Symbol;Acc:HGNC:14436]	150	1.0755441188812256	0.2043652	Yes	
+row_4	PRKCA	protein kinase C alpha [Source:HGNC Symbol;Acc:HGNC:9393]	165	1.0153656005859375	0.2442649	Yes	
+row_5	PLAC8	placenta associated 8 [Source:HGNC Symbol;Acc:HGNC:19254]	174	0.9945240020751953	0.28590274	Yes	
+row_6	PMEPA1	prostate transmembrane protein, androgen induced 1 [Source:HGNC Symbol;Acc:HGNC:14107]	247	0.8434218168258667	0.2920221	Yes	
+row_7	PDE4D	phosphodiesterase 4D [Source:HGNC Symbol;Acc:HGNC:8783]	254	0.8358234763145447	0.32733944	Yes	
+row_8	PPP2R3A	protein phosphatase 2 regulatory subunit B''alpha [Source:HGNC Symbol;Acc:HGNC:9307]	435	0.5992738604545593	0.27401417	No	
+row_9	TNFAIP8	TNF alpha induced protein 8 [Source:HGNC Symbol;Acc:HGNC:17260]	490	0.5498175024986267	0.2748413	No	
+row_10	CRTAM	cytotoxic and regulatory T cell molecule [Source:HGNC Symbol;Acc:HGNC:24313]	518	0.5241746306419373	0.28658846	No	
+row_11	CPLANE1	ciliogenesis and planar polarity effector complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:25801]	636	0.4626123309135437	0.25525	No	
+row_12	ATP1A1	ATPase Na+/K+ transporting subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:799]	690	0.43845537304878235	0.25146136	No	
+row_13	SNTB1	syntrophin beta 1 [Source:HGNC Symbol;Acc:HGNC:11168]	1043	0.31317922472953796	0.10813604	No	
+row_14	STIM2	stromal interaction molecule 2 [Source:HGNC Symbol;Acc:HGNC:19205]	1203	0.2724881172180176	0.04935271	No	
+row_15	METTL16	methyltransferase 16, N6-methyladenosine [Source:HGNC Symbol;Acc:HGNC:28484]	1372	-0.2643139362335205	-0.013830938	No	
+row_16	UQCC1	ubiquinol-cytochrome c reductase complex assembly factor 1 [Source:HGNC Symbol;Acc:HGNC:15891]	1375	-0.2650264501571655	-0.0026760125	No	
+row_17	FHIT	fragile histidine triad diadenosine triphosphatase [Source:HGNC Symbol;Acc:HGNC:3701]	1376	-0.2650899589061737	0.009377056	No	
+row_18	SPTBN1	spectrin beta, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11275]	1379	-0.2653026282787323	0.020544538	No	
+row_19	LRP6	LDL receptor related protein 6 [Source:HGNC Symbol;Acc:HGNC:6698]	1693	-0.37334978580474854	-0.102587484	No	
+row_20	KLHDC1	kelch domain containing 1 [Source:HGNC Symbol;Acc:HGNC:19836]	1759	-0.4013102650642395	-0.11343656	No	
+row_21	RPS20	ribosomal protein S20 [Source:HGNC Symbol;Acc:HGNC:10405]	1952	-0.5360517501831055	-0.17500794	No	
+row_22	MLLT3	MLLT3 super elongation complex subunit [Source:HGNC Symbol;Acc:HGNC:7136]	2036	-0.6260719895362854	-0.18369488	No	
+row_23	TMEM131L	transmembrane 131 like [Source:HGNC Symbol;Acc:HGNC:29146]	2040	-0.6361459493637085	-0.15611358	No	
+row_24	TMEM71	transmembrane protein 71 [Source:HGNC Symbol;Acc:HGNC:26572]	2132	-0.8448513746261597	-0.15843412	No	
+row_25	SSBP2	single stranded DNA binding protein 2 [Source:HGNC Symbol;Acc:HGNC:15831]	2201	-1.1208264827728271	-0.13791123	No	
+row_26	RIPOR2	RHO family interacting cell polarization regulator 2 [Source:HGNC Symbol;Acc:HGNC:13872]	2246	-1.5491647720336914	-0.08716967	No	
+row_27	LEF1	lymphoid enhancer binding factor 1 [Source:HGNC Symbol;Acc:HGNC:6551]	2259	-2.0550026893615723	8.953414E-4	No	

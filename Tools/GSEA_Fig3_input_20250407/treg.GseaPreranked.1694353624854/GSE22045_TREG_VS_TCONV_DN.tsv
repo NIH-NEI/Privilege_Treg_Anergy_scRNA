@@ -1,0 +1,34 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	MXI1	MAX interactor 1, dimerization protein [Source:HGNC Symbol;Acc:HGNC:7534]	27	2.3784940242767334	0.07291975	Yes	
+row_1	PLAC8	placenta associated 8 [Source:HGNC Symbol;Acc:HGNC:19254]	50	2.0304431915283203	0.13555998	Yes	
+row_2	HIF1A	hypoxia inducible factor 1 subunit alpha [Source:HGNC Symbol;Acc:HGNC:4910]	81	1.6163811683654785	0.18077226	Yes	
+row_3	RAPH1	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1 [Source:HGNC Symbol;Acc:HGNC:14436]	97	1.5169398784637451	0.22810592	Yes	
+row_4	RAB43	RAB43, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:19983]	115	1.400185465812683	0.2706207	Yes	
+row_5	MT1X	metallothionein 1X [Source:HGNC Symbol;Acc:HGNC:7405]	230	1.032104730606079	0.26413998	No	
+row_6	PMEPA1	prostate transmembrane protein, androgen induced 1 [Source:HGNC Symbol;Acc:HGNC:14107]	442	0.730614960193634	0.21098705	No	
+row_7	CHMP4B	charged multivesicular body protein 4B [Source:HGNC Symbol;Acc:HGNC:16171]	668	0.5366830825805664	0.14585	No	
+row_8	PDE4D	phosphodiesterase 4D [Source:HGNC Symbol;Acc:HGNC:8783]	709	0.5097721219062805	0.14872672	No	
+row_9	TNFAIP8	TNF alpha induced protein 8 [Source:HGNC Symbol;Acc:HGNC:17260]	783	0.4663289785385132	0.13778809	No	
+row_10	BCR	BCR activator of RhoGEF and GTPase [Source:HGNC Symbol;Acc:HGNC:1014]	798	0.4609687030315399	0.14865276	No	
+row_11	SNTB1	syntrophin beta 1 [Source:HGNC Symbol;Acc:HGNC:11168]	835	0.44488948583602905	0.15075666	No	
+row_12	TMED10	transmembrane p24 trafficking protein 10 [Source:HGNC Symbol;Acc:HGNC:16998]	1040	0.36679399013519287	0.08751942	No	
+row_13	CPLANE1	ciliogenesis and planar polarity effector complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:25801]	1124	0.33730548620224	0.06835213	No	
+row_14	PRKCA	protein kinase C alpha [Source:HGNC Symbol;Acc:HGNC:9393]	1180	0.3207736313343048	0.05904414	No	
+row_15	CRTAM	cytotoxic and regulatory T cell molecule [Source:HGNC Symbol;Acc:HGNC:24313]	1409	0.2651648223400116	-0.01668404	No	
+row_16	ORC5	origin recognition complex subunit 5 [Source:HGNC Symbol;Acc:HGNC:8491]	1623	-0.2802417278289795	-0.08629545	No	
+row_17	NUB1	negative regulator of ubiquitin like proteins 1 [Source:HGNC Symbol;Acc:HGNC:17623]	1836	-0.3267732560634613	-0.1539107	No	
+row_18	EIF4G1	eukaryotic translation initiation factor 4 gamma 1 [Source:HGNC Symbol;Acc:HGNC:3296]	1848	-0.3316276967525482	-0.14644046	No	
+row_19	UQCC1	ubiquinol-cytochrome c reductase complex assembly factor 1 [Source:HGNC Symbol;Acc:HGNC:15891]	1899	-0.3482588231563568	-0.15292594	No	
+row_20	KLHDC1	kelch domain containing 1 [Source:HGNC Symbol;Acc:HGNC:19836]	1995	-0.3849833011627197	-0.1749024	No	
+row_21	URI1	URI1 prefoldin like chaperone [Source:HGNC Symbol;Acc:HGNC:13236]	1998	-0.3857598602771759	-0.16218908	No	
+row_22	METTL16	methyltransferase 16, N6-methyladenosine [Source:HGNC Symbol;Acc:HGNC:28484]	2006	-0.3905818462371826	-0.15117112	No	
+row_23	FHIT	fragile histidine triad diadenosine triphosphatase [Source:HGNC Symbol;Acc:HGNC:3701]	2119	-0.4414924383163452	-0.17751224	No	
+row_24	LRP6	LDL receptor related protein 6 [Source:HGNC Symbol;Acc:HGNC:6698]	2257	-0.5239514708518982	-0.21029437	No	
+row_25	TMEM131L	transmembrane 131 like [Source:HGNC Symbol;Acc:HGNC:29146]	2363	-0.5994482636451721	-0.22851557	No	
+row_26	SPTBN1	spectrin beta, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11275]	2411	-0.6545395255088806	-0.22319707	No	
+row_27	TMEM71	transmembrane protein 71 [Source:HGNC Symbol;Acc:HGNC:26572]	2484	-0.7512352466583252	-0.22382292	No	
+row_28	RPS20	ribosomal protein S20 [Source:HGNC Symbol;Acc:HGNC:10405]	2626	-1.1335583925247192	-0.23682739	No	
+row_29	MLLT3	MLLT3 super elongation complex subunit [Source:HGNC Symbol;Acc:HGNC:7136]	2662	-1.3625328540802002	-0.20233516	No	
+row_30	RIPOR2	RHO family interacting cell polarization regulator 2 [Source:HGNC Symbol;Acc:HGNC:13872]	2668	-1.4061728715896606	-0.1551389	No	
+row_31	SSBP2	single stranded DNA binding protein 2 [Source:HGNC Symbol;Acc:HGNC:15831]	2692	-1.7700703144073486	-0.10195552	No	
+row_32	LEF1	lymphoid enhancer binding factor 1 [Source:HGNC Symbol;Acc:HGNC:6551]	2715	-3.157310724258423	-9.9942554E-8	No	

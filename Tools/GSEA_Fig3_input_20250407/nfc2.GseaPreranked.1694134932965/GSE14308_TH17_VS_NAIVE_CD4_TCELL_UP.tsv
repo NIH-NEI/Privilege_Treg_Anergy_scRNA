@@ -1,0 +1,33 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ADAM12	ADAM metallopeptidase domain 12 [Source:HGNC Symbol;Acc:HGNC:190]	81	1.61881685256958	0.05893246	Yes	
+row_1	GAPDH	glyceraldehyde-3-phosphate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:4141]	221	1.020195722579956	0.061100982	Yes	
+row_2	COX17	cytochrome c oxidase copper chaperone COX17 [Source:HGNC Symbol;Acc:HGNC:2264]	228	1.0061168670654297	0.115359575	Yes	
+row_3	TSHZ1	teashirt zinc finger homeobox 1 [Source:HGNC Symbol;Acc:HGNC:10669]	393	0.7055575251579285	0.08987364	Yes	
+row_4	BMPR2	bone morphogenetic protein receptor type 2 [Source:HGNC Symbol;Acc:HGNC:1078]	407	0.6914887428283691	0.1236354	Yes	
+row_5	REEP3	receptor accessory protein 3 [Source:HGNC Symbol;Acc:HGNC:23711]	455	0.6543979644775391	0.14179006	Yes	
+row_6	HSPA4L	heat shock protein family A (Hsp70) member 4 like [Source:HGNC Symbol;Acc:HGNC:17041]	459	0.6497541069984436	0.17717831	Yes	
+row_7	NDUFA13	NADH:ubiquinone oxidoreductase subunit A13 [Source:HGNC Symbol;Acc:HGNC:17194]	482	0.6273511052131653	0.2037506	Yes	
+row_8	CSRNP1	cysteine and serine rich nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:14300]	484	0.6265308260917664	0.2386266	Yes	
+row_9	ATP10A	ATPase phospholipid transporting 10A (putative) [Source:HGNC Symbol;Acc:HGNC:13542]	519	0.5974750518798828	0.2587455	Yes	
+row_10	GMFG	glia maturation factor gamma [Source:HGNC Symbol;Acc:HGNC:4374]	552	0.5769593119621277	0.27850458	Yes	
+row_11	P2RY10	P2Y receptor family member 10 [Source:HGNC Symbol;Acc:HGNC:19906]	634	0.523422122001648	0.27576643	Yes	
+row_12	GTF2IRD1	GTF2I repeat domain containing 1 [Source:HGNC Symbol;Acc:HGNC:4661]	640	0.5149024128913879	0.3027673	Yes	
+row_13	MICAL1	microtubule associated monooxygenase, calponin and LIM domain containing 1 [Source:HGNC Symbol;Acc:HGNC:20619]	696	0.4798579514026642	0.3079145	Yes	
+row_14	EIF3F	eukaryotic translation initiation factor 3 subunit F [Source:HGNC Symbol;Acc:HGNC:3275]	761	0.44601836800575256	0.30757797	Yes	
+row_15	NEDD8	NEDD8 ubiquitin like modifier [Source:HGNC Symbol;Acc:HGNC:7732]	774	0.44034451246261597	0.32759795	Yes	
+row_16	LRP10	LDL receptor related protein 10 [Source:HGNC Symbol;Acc:HGNC:14553]	776	0.4397672116756439	0.35195917	Yes	
+row_17	CEMIP2	cell migration inducing hyaluronidase 2 [Source:HGNC Symbol;Acc:HGNC:11869]	850	0.41067659854888916	0.34605438	Yes	
+row_18	LEO1	LEO1 homolog, Paf1/RNA polymerase II complex component [Source:HGNC Symbol;Acc:HGNC:30401]	868	0.40393972396850586	0.3620367	Yes	
+row_19	ZBTB7A	zinc finger and BTB domain containing 7A [Source:HGNC Symbol;Acc:HGNC:18078]	1043	0.34254521131515503	0.31213707	No	
+row_20	PIK3AP1	phosphoinositide-3-kinase adaptor protein 1 [Source:HGNC Symbol;Acc:HGNC:30034]	1048	0.34030330181121826	0.32970566	No	
+row_21	NDE1	nudE neurodevelopment protein 1 [Source:HGNC Symbol;Acc:HGNC:17619]	1188	0.2981823980808258	0.2912249	No	
+row_22	RAD51B	RAD51 paralog B [Source:HGNC Symbol;Acc:HGNC:9822]	1245	0.286335289478302	0.28507915	No	
+row_23	PSMA1	proteasome 20S subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:9530]	1267	0.28229668736457825	0.2926225	No	
+row_24	NENF	neudesin neurotrophic factor [Source:HGNC Symbol;Acc:HGNC:30384]	1349	0.26437440514564514	0.2753	No	
+row_25	MANF	mesencephalic astrocyte derived neurotrophic factor [Source:HGNC Symbol;Acc:HGNC:15461]	1357	0.2632044553756714	0.2873351	No	
+row_26	GNGT2	G protein subunit gamma transducin 2 [Source:HGNC Symbol;Acc:HGNC:4412]	1727	-0.3233126997947693	0.15881787	No	
+row_27	EYA2	EYA transcriptional coactivator and phosphatase 2 [Source:HGNC Symbol;Acc:HGNC:3520]	2058	-0.4756569266319275	0.054384585	No	
+row_28	PML	PML nuclear body scaffold [Source:HGNC Symbol;Acc:HGNC:9113]	2122	-0.5169047117233276	0.058436565	No	
+row_29	TESC	tescalcin [Source:HGNC Symbol;Acc:HGNC:26065]	2199	-0.5796020030975342	0.060849406	No	
+row_30	RANBP9	RAN binding protein 9 [Source:HGNC Symbol;Acc:HGNC:13727]	2287	-0.6687703132629395	0.06390866	No	
+row_31	FOCAD	focadhesin [Source:HGNC Symbol;Acc:HGNC:23377]	2296	-0.6869614720344543	0.099403605	No	

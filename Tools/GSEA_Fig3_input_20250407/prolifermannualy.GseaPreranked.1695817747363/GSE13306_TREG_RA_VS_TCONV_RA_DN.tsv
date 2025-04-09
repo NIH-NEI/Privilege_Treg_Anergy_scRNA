@@ -1,0 +1,28 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CCL5	C-C motif chemokine ligand 5 [Source:HGNC Symbol;Acc:HGNC:10632]	194	1.1737775802612305	0.02074666	Yes	
+row_1	UBALD2	UBA like domain containing 2 [Source:HGNC Symbol;Acc:HGNC:28438]	430	0.7956194877624512	0.0019934294	Yes	
+row_2	KMT5A	lysine methyltransferase 5A [Source:HGNC Symbol;Acc:HGNC:29489]	482	0.7419606447219849	0.03781852	Yes	
+row_3	HDGF	heparin binding growth factor [Source:HGNC Symbol;Acc:HGNC:4856]	510	0.7191905379295349	0.079657316	Yes	
+row_4	PPIB	peptidylprolyl isomerase B [Source:HGNC Symbol;Acc:HGNC:9255]	645	0.6176928281784058	0.080458194	Yes	
+row_5	COBLL1	cordon-bleu WH2 repeat protein like 1 [Source:HGNC Symbol;Acc:HGNC:23571]	664	0.6071028113365173	0.11729564	Yes	
+row_6	VGLL4	vestigial like family member 4 [Source:HGNC Symbol;Acc:HGNC:28966]	984	0.4573425054550171	0.048203826	No	
+row_7	GOLM1	golgi membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:15451]	999	0.45031943917274475	0.07532246	No	
+row_8	GOT2	glutamic-oxaloacetic transaminase 2 [Source:HGNC Symbol;Acc:HGNC:4433]	1037	0.4338013827800751	0.093991205	No	
+row_9	TBC1D4	TBC1 domain family member 4 [Source:HGNC Symbol;Acc:HGNC:19165]	1538	0.30133646726608276	-0.043420624	No	
+row_10	CACNA1S	calcium voltage-gated channel subunit alpha1 S [Source:HGNC Symbol;Acc:HGNC:1397]	1767	0.2567500174045563	-0.097717285	No	
+row_11	DOK1	docking protein 1 [Source:HGNC Symbol;Acc:HGNC:2990]	1768	0.25668296217918396	-0.07972948	No	
+row_12	PIM2	Pim-2 proto-oncogene, serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:8987]	1851	-0.25995033979415894	-0.08751144	No	
+row_13	SORL1	sortilin related receptor 1 [Source:HGNC Symbol;Acc:HGNC:11185]	1856	-0.2614738941192627	-0.07045614	No	
+row_14	PDE6H	phosphodiesterase 6H [Source:HGNC Symbol;Acc:HGNC:8790]	1943	-0.2807161808013916	-0.078051105	No	
+row_15	RINL	Ras and Rab interactor like [Source:HGNC Symbol;Acc:HGNC:24795]	2119	-0.32815906405448914	-0.11053951	No	
+row_16	TNFAIP8L2	TNF alpha induced protein 8 like 2 [Source:HGNC Symbol;Acc:HGNC:26277]	2138	-0.3328287899494171	-0.09292261	No	
+row_17	INVS	inversin [Source:HGNC Symbol;Acc:HGNC:17870]	2181	-0.343563437461853	-0.082162835	No	
+row_18	KCNMB4	potassium calcium-activated channel subfamily M regulatory beta subunit 4 [Source:HGNC Symbol;Acc:HGNC:6289]	2237	-0.3585916757583618	-0.07447166	No	
+row_19	RFTN1	raftlin, lipid raft linker 1 [Source:HGNC Symbol;Acc:HGNC:30278]	2240	-0.36128881573677063	-0.049787417	No	
+row_20	ABCC5	ATP binding cassette subfamily C member 5 [Source:HGNC Symbol;Acc:HGNC:56]	2303	-0.3856998085975647	-0.042415965	No	
+row_21	TDRP	testis development related protein [Source:HGNC Symbol;Acc:HGNC:26951]	2652	-0.5490694046020508	-0.11427443	No	
+row_22	FRY	FRY microtubule binding protein [Source:HGNC Symbol;Acc:HGNC:20367]	2677	-0.5636286735534668	-0.0823859	No	
+row_23	SH3KBP1	SH3 domain containing kinase binding protein 1 [Source:HGNC Symbol;Acc:HGNC:13867]	2797	-0.6543258428573608	-0.07426199	No	
+row_24	NSD1	nuclear receptor binding SET domain protein 1 [Source:HGNC Symbol;Acc:HGNC:14234]	2950	-0.8266023397445679	-0.06452822	No	
+row_25	SLC12A7	solute carrier family 12 member 7 [Source:HGNC Symbol;Acc:HGNC:10915]	3017	-0.9626331329345703	-0.017994728	No	
+row_26	KMT2C	lysine methyltransferase 2C [Source:HGNC Symbol;Acc:HGNC:13726]	3031	-0.9897299408912659	0.047241706	No	
