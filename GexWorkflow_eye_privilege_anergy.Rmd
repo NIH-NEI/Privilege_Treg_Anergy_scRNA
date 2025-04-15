@@ -1,0 +1,1081 @@
+
+---
+# This RMD file loads the cellranger count data and performs single-cell gene expression analysis of T cell differentiation in an ocular immune privilege model.
+---
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = FALSE)
+options(knitr.duplicate.label = "allow")
+knitr::opts_chunk$set()
+```
+
+## 1. Introduction
+This document takes the cellranger count data for each of the samples, does qc anlaysis, filtering, generates before and after qc plots and combines the data.
+```{r packages, message=FALSE, warning=FALSE}
+install.packages("Seurat")
+
+library(hdf5r)
+library(Seurat)
+library(ggplot2)
+library(cowplot)
+library(tidyverse)
+library(HGNChelper)
+library(EnhancedVolcano)
+library(ComplexHeatmap) 
+library(monocle)
+library(patchwork)
+```
+
+## 2. Data setup
+```{r datasetup, message=FALSE, warning=FALSE}
+# Set the input, output paths
+directorypath="/path/to/your/project/Results/cellranger/"
+outputpath="/path/to/your/project/Ocular_privilege_Output/"
+samples=c("S1_HTO_1","S1_HTO_2","S1_HTO_3","S1_HTO_4","S3_HTO_1")
+setwd("/path/to/your/project/Ocular_privilege_Output/")
+```
+
+## 3. Quality Analysis and Filtering
+This part of the workflow reads in each of the samples, analyses the quality, performs the quality filter and merges the data. Both merged unfiltered and merged filtered data are then used for plotting the quality
+```{r qc, message=FALSE, warning=FALSE}
+# Using the for loop to reads the samples list
+# Create empty lists to hold the combined data set
+allsamplestomerge=list()
+allsamplestomergeprefilter=list()
+
+# Using the for loop to reads the samples list
+for(i in samples)
+{
+  # Remove any old variables
+  rm(onesampledataFilt)
+  rm(onesampledata)
+  rm(onesample)
+  # Print the current sample name
+  print(i)
+  # Read the data file
+  onesample <- Read10X_h5(paste0(directorypath,paste0(i,"/sample_filtered_feature_bc_matrix.h5",sep=""),sep=""), use.names = T)
+
+  # Print column names
+  colnames(onesample$`Gene Expression`)
+  # Add gene names to columnnames
+  colnames(onesample$`Gene Expression`) <-     paste(sapply(strsplit(colnames(onesample$`Gene Expression`),split="-"),'[[',1L),i,sep="-")
+  # Print column names
+  colnames(onesample$`Gene Expression`)
+  
+  # Create a Seurat data object from the gex matrix, keeping all the features, and only cells with at least 300 genes
+  onesampledata <- CreateSeuratObject(counts = onesample[["Gene Expression"]], min.cells = 0,min.features = 300,names.field = 2,names.delim = "\\-")
+  
+  # Check genes names
+  head(rownames(onesampledata))
+  # Check data rows and columns
+  head(onesampledata)
+  
+  # Generate Percent mito for each of the cells
+  # Lookup genes
+  grep("^mt-",rownames(onesampledata@assays$RNA@counts),value = TRUE)
+  grep("Rp[sl]",rownames(onesampledata@assays$RNA@counts),value = TRUE)
+  grep("^Hb[^(p)]",rownames(onesampledata@assays$RNA@counts),value = TRUE)
+  
+  # Generate Percent mito for each of the cells
+  onesampledata$percent.mito <- PercentageFeatureSet(onesampledata, pattern = "^mt-")
+  summary(onesampledata$percent.mito)
+  head(onesampledata)
+  
+  # Generate Percent ribo for each of the cells
+  onesampledata$percent.ribo <- PercentageFeatureSet(onesampledata, pattern = "Rp[sl]")
+  summary(onesampledata$percent.ribo)
+  head(onesampledata)
+  
+  # Generate Percent hemoglobin for each of the cells
+  onesampledata$percent.hb <- PercentageFeatureSet(onesampledata, pattern = "^Hb[^(p)]")
+  summary(onesampledata$percent.hb)
+  head(onesampledata)
+  
+  # Check the total number of cells in this sample
+  table(onesampledata$orig.ident)
+  # Filter data and keep only cells that has percent.mito less than or equal to 8
+  onesampledataFilt <- subset(onesampledata, percent.mito <= 8)
+  # Check the number of cells after mito filtering
+  table(onesampledataFilt$orig.ident)
+  # Filter for nCount RNA (total rna molecules sequenced)
+  onesampledataFilt <- subset(onesampledataFilt, nCount_RNA >= 1000 & nCount_RNA <= 40000)
+  # Check number of cells after ncount filtering
+  table(onesampledataFilt$orig.ident)
+  # Filter for nfeature (total number of genes expressed)
+  onesampledataFilt <- subset(onesampledataFilt, nFeature_RNA >= 400)
+  # Check number of cells after nfeature filtering
+  table(onesampledataFilt$orig.ident)
+  TRUE# Filter for percent ribo
+  onesampledataFilt <- subset(onesampledataFilt, percent.ribo > 10 & percent.ribo < 45)
+  # Counts after filtering
+  table(onesampledataFilt$orig.ident)
+  
+  # Add filtered and unfiltered data to a list
+  allsamplestomerge[[i]]=onesampledataFilt
+  allsamplestomergeprefilter[[i]]=onesampledata
+}
+```
+## 4. Merge samples
+```{r merge, message=FALSE, warning=FALSE}
+# Create one and the rest of the samples as a list, for filtered data
+one=allsamplestomerge[[1]]
+one
+rest=allsamplestomerge[2:length(allsamplestomerge)]
+rest
+
+# Create one and the rest of the samples as a list, for profiltered data
+onepre=allsamplestomergeprefilter[[1]]
+onepre
+restpre=allsamplestomergeprefilter[2:length(allsamplestomergeprefilter)]
+restpre
+
+# Merge filtered seurat objects
+allsamples <- merge(one, y = rest)
+allsamples
+head(allsamples)
+table(Idents(allsamples))
+
+# Merge prefiltered seurat objects
+allsamplespre <- merge(onepre, y = restpre)
+allsamplespre
+head(allsamplespre)
+table(Idents(allsamplespre))
+```
+## 5. Add metadata
+```{r metadata, message=FALSE, warning=FALSE}
+## Assign sample types metadata column
+allsamples$type <- plyr::mapvalues(
+  x = allsamples$orig.ident, 
+  from = c("S1_HTO_1","S1_HTO_2","S1_HTO_3","S1_HTO_4","S3_HTO_1"),
+  to = c("eye","eye","eye","eye","Naive T"))
+head(allsamples)
+
+# View type counts
+table(allsamples$type)
+```
+## 6. Generate before and after QC plots
+```{r plots, message=FALSE, warning=FALSE}
+Idents(allsamples) <- "orig.ident"
+# Generate before filtering quality plots
+qcbefore=VlnPlot(allsamplespre,features = c("nFeature_RNA", "nCount_RNA","percent.mito","percent.ribo"),ncol = 2, pt.size = 0) +
+  NoLegend()
+qcbefore
+# Save the plot in current working directory
+# ggsave(paste(outputpath,"before-qc-violineplot.pdf",sep=""), plot = qcbefore, width = 15, height = 20, units = "cm")
+
+# Generate after filtering quality plots
+qcafter=VlnPlot(allsamples,features = c("nFeature_RNA", "nCount_RNA","percent.mito","percent.ribo"),ncol = 2, pt.size = 0) +
+  NoLegend()
+qcafter
+# Save the plot in current working directory
+# ggsave(paste(outputpath,"after-qc-violineplot.pdf",sep=""), plot = qcafter, width = 15, height = 20, units = "cm")
+```
+## 7. Normalization
+```{r normalize, message=FALSE, warning=FALSE}
+###################### Normalize Data
+# Feature counts for each cell are divided by the total counts for that cell and multiplied by the scale.factor. This is then natural-log transformed
+# Cell level normalization - accounts for sequencing depth
+allsamples <- NormalizeData(
+  object = allsamples,
+  normalization.method = "LogNormalize",
+  scale.factor = 10000)
+
+##################### Find variable genes
+# FindVariableFeatures needs normalization
+allsamples <- FindVariableFeatures(
+  object = allsamples,
+  selection.method = "vst")
+```
+## 8. Scaling & Batch Correction
+```{r scale, message=FALSE, warning=FALSE}
+##################### SCALE DATA
+# PCA needs scaled data
+# Zero centers and scales (mean/sd) gene/feature data in each cell (for across sample comparison), so extreme ranges in expression do not affect clustering (done for making cells with similar expression cluster together)
+dim(allsamples)
+allsamples <- ScaleData(
+  object = allsamples,
+  # Remove unwanted sources of variation (technical, batch etc.)
+  vars.to.regress = c("percent.mito", "nFeature_RNA", "percent.ribo", "nCount_RNA"))
+```
+## 9. PCA
+```{r PCA, message=FALSE, warning=FALSE}
+##################### PCA
+# Run PCA with 50 pcs
+allsamples <- RunPCA(object = allsamples, npcs=50)
+# Print genes in the top 5 pcs
+print(allsamples[["pca"]], dims = 1:5, nfeatures = 5)
+# Identify number of PCs that explains majority of variations
+ElbowPlot(allsamples, ndims=50, reduction = "pca")
+# Visualize the genes in the first PC
+VizDimLoadings(allsamples, dims = 1, ncol = 1) + theme_minimal(base_size = 8)
+# Visualize the genes in the second PC
+VizDimLoadings(allsamples, dims = 2, ncol = 1) + theme_minimal(base_size = 8)
+
+Idents(allsamples) <- "orig.ident"
+# Plot heatmap with cells=500 plotting cells with extreme cells on both ends of spectrum
+DimHeatmap(object = allsamples, dims = 1:6, cells = 500, balanced = TRUE)
+```
+
+## 10. Clustering
+```{r clustering, message=FALSE, warning=FALSE}
+##################### Clustering
+# use the first 20 pc's
+use.pcs = 1:20
+# FindNeighbors with 20 pcs
+allsamples <- FindNeighbors(allsamples, reduction="pca", dims = use.pcs)
+# FindClusters with resolution starting at 0.05 and ending at 0.65, with 0.05 increment
+allsamples <- FindClusters(
+  object = allsamples,
+  resolution = seq(0.05,0.65,0.05),
+  verbose = FALSE)
+head(allsamples)
+# Count number of clusters at each resolution
+sapply(grep("res",colnames(allsamples@meta.data),value = TRUE),
+       function(x) length(unique(allsamples@meta.data[,x])))
+```
+
+## 11. UMAP 
+```{r umap, message=FALSE, warning=FALSE}
+########################## UMAP
+# Run umap with 20 pcs
+set.seed(20)
+allsamples <- RunUMAP(
+  object = allsamples,
+  reduction.use = "pca",
+  dims = use.pcs)
+# Plot umap
+Idents(allsamples) <- "RNA_snn_res.0.2"
+DimPlot(object = allsamples, pt.size=0.2, reduction = "umap", label = T)
+```
+
+### 12. Remove non-T cell:allsamplesclean and re-UMAP
+```{r subset, message=FALSE, warning=FALSE}
+###########################
+# After checking the lineage genes, cluster 5 expresses many myeloid-related genes
+# Remove "Macrophages" in r=0.2
+Idents(allsamples) <- "RNA_snn_res.0.2"
+table(Idents(allsamples))
+allsamplesclean <- subset(allsamples, idents = 5 , invert = TRUE)
+table(Idents(allsamplesclean))
+DimPlot(allsamplesclean, reduction = "umap", label = T, repel = TRUE) 
+
+# Assign "eyenaive" object for downstream analysis
+eyenaive<-allsamplesclean
+# re-PCA.
+# Run PCA with 50 pcs
+eyenaive <- RunPCA(object = eyenaive, npcs=50)
+# Print genes in the top 5 pcs
+print(eyenaive[["pca"]], dims = 1:5, nfeatures = 5)
+# Identify number of PCs that explains majority of variations
+ElbowPlot(eyenaive, ndims=50, reduction = "pca")
+# Visualize the genes in the first PC
+VizDimLoadings(eyenaive, dims = 1, ncol = 1) + theme_minimal(base_size = 8)
+# Visualize the genes in the second PC
+VizDimLoadings(eyenaive, dims = 2, ncol = 1) + theme_minimal(base_size = 8)
+
+### Re-cluster
+eyenaive <- FindNeighbors(eyenaive, reduction="pca", dims = use.pcs)
+eyenaive <- FindClusters(
+  object = eyenaive,
+  resolution = seq(0.1,0.8,0.1),
+  verbose = FALSE)
+#can try different resolution range and increase degree, e.g., 0.1 or 0.05 
+
+# Count number of clusters at each resolution
+sapply(grep("res",colnames(eyenaive@meta.data),value = TRUE),
+       function(x) length(unique(eyenaive@meta.data[,x])))
+
+# Re-Run umap with 20 pcs
+set.seed(20)
+eyenaive <- RunUMAP(
+  object = eyenaive,
+  reduction.use = "pca",
+  dims = use.pcs)
+
+Idents(eyenaive) <- "RNA_snn_res.0.2"
+DimPlot(eyenaive, reduction = "umap", label = TRUE, repel = TRUE)
+DimPlot(object = eyenaive, pt.size=0.2, reduction = "umap", group.by = "type",label = T)
+DimPlot(object = eyenaive, pt.size=0.2, reduction = "umap", split.by = "orig.ident")
+
+# list cell number in each cluster for sample types
+table(Idents(eyenaive),eyenaive$type)
+table(Idents(eyenaive),eyenaive$orig.ident)
+propotioninfo=table(Idents(eyenaive),eyenaive$orig.ident)
+
+# Save the file of cell number in each cluster text file
+write.table(propotioninfo, file=paste(outputpath,"propotioninfo.txt",sep=""), quote=F, sep = "\t")
+
+
+# Show sorted naive before injection and retrieved from eye after on week
+DimPlot(object = eyenaive, pt.size=0.2, reduction = "umap", group.by = "type",cols = c("#2dc2a9","salmon"))
+
+Idents(eyenaive) <- "RNA_snn_res.0.2"
+DimPlot(object = eyenaive, pt.size=0.2, reduction = "umap")
+## Assign sample types metadata column 
+#### different version of annotation during analysis. 
+#### anergic_naive=nfc1=anergic1, and anergic_IL17=nfc2=anergic2
+eyenaive$eyenaive_annotation=recode(as.character(eyenaive$RNA_snn_res.0.2),
+                              "0"="anergic_naive",
+                              "1"="anergic_IL17",
+                              "2"="naiveT",
+                              "3"="Treg",
+                              "4"="proliferative")
+
+head(eyenaive)
+Idents(eyenaive) <- "eyenaive_annotation"
+levels(eyenaive)
+DimPlot(object = eyenaive, pt.size=0.2, reduction = "umap",label = T)
+```
+
+### 13. FindAllMarkers (Suppl Fig. 1A)
+```{r FindAllMarkers, message=FALSE, warning=FALSE}
+###########################
+markersall_eyenaive=FindAllMarkers(eyenaive)
+head(markersall_eyenaive)
+
+write.table(markersall_eyenaive, file=paste(outputpath,"markersall_eyenaive.txt",sep=""), quote=F, row.names = FALSE, sep = "\t")
+markersall_eyenaivefiltered=dplyr::filter(markersall_eyenaive, p_val_adj < 0.05 & (avg_log2FC > 1 | avg_log2FC < -1))
+nrow(markersall_eyenaive)
+nrow(markersall_eyenaivefiltered)
+write.table(markersall_eyenaivefiltered, file=paste(outputpath,"markersall_eyenaivefiltered.txt",sep=""), quote=F, row.names = FALSE, sep = "\t")
+
+# Extract the top 10 marker for each cluster and plot heatmap 
+markersall_eyenaive %>%
+  group_by(cluster) %>%
+  top_n(n = 10, wt = avg_log2FC) -> top10
+top10
+
+# Get only the marker - gene names
+top10_eyenaive<- top10 %>%
+  select(gene) %>% 
+  unclass() %>% 
+  stack() %>%
+  pull(values) %>%
+  unique() %>%
+  .[!is.na(.)]
+top10_eyenaive
+
+# Scale all genes - not just variable genes 
+eyenaiveheatmap = eyenaive
+eyenaiveheatmap <- ScaleData(
+  object = eyenaive,
+features = rownames(eyenaive),
+vars.to.regress = c("percent.mito", "nFeature_RNA", "percent.ribo", "nCount_RNA"))
+
+# heatmap Fig.S1
+DoHeatmap(eyenaiveheatmap, features = top10_eyenaive, group.by = "RNA_snn_res.0.2") + scale_fill_gradientn(colors = c("steelblue4", "white", "firebrick3"))+  NoLegend()
+```
+
+### 14. FeaturePlot to check markers (Fig. 1E, Fig. 2B-C, and Fig.6D)
+```{r FeaturePlot, message=FALSE, warning=FALSE}
+########################### tables
+# Fig.1E Primed phenotype and Treg and proliferation marker
+FeaturePlot(eyenaive, features=c("Cd44"),)
+FeaturePlot(eyenaive, features=c("Sell"),)
+FeaturePlot(eyenaive, features=c("Foxp3"),)
+FeaturePlot(eyenaive, features=c("Mki67"),)
+
+# Fig.2B Th lineage-specific markers
+FeaturePlot(eyenaive, features=c("Tbx21"),)
+FeaturePlot(eyenaive, features=c("Ccr5"),)
+FeaturePlot(eyenaive, features=c("Cxcr3"),)
+
+FeaturePlot(eyenaive, features=c("Rorc"),)
+FeaturePlot(eyenaive, features=c("Il17a"),)
+FeaturePlot(eyenaive, features=c("Ccr6"),)
+
+FeaturePlot(eyenaive, features=c("Il2ra"),)
+FeaturePlot(eyenaive, features=c("Il10"),)
+FeaturePlot(eyenaive, features=c("Tgfb1"),)
+
+# Fig.2C naive related marker
+FeaturePlot(eyenaive, features=c("Ccr7"),) 
+FeaturePlot(eyenaive, features=c("Lef1"),) 
+FeaturePlot(eyenaive, features=c("Tcf7"),) 
+
+# Fig.6D Reciprocal expression of Foxp3 and Nrgn
+FeaturePlot(eyenaive, features=c("Nrgn"),) 
+
+```
+
+### 15. VlnPlot to check markers (Fig. 2A and Suppl. Fig.1 B-C )
+```{r VlnPlot, message=FALSE, warning=FALSE}
+Idents(eyenaive) <- "RNA_snn_res.0.2"
+DimPlot(eyenaive, pt.size=0.2, reduction = "umap")
+
+Idents(eyenaive) <- factor(Idents(eyenaive),levels=c(2,0,1,3,4))
+
+Vlngene <- c('Foxp3', 'Tbx21','Rorc', 'Gata3', 'Bcl6')
+Vlngene <- c('Il2', 'Ifng', 'Il17a', 'Csf2', 'Il10', 'Tgfb1')
+VlnPlot(eyenaive,features =  Vlngene,pt.size=0,ncol=1)+NoLegend()
+
+#Suppl Fig.1B-C
+Vlngene <- c('Il17f','Il22',"Il23r")  # Th17 associated
+Vlngene <- c('Ccr3','Ccr8',"Il4", 'Il5') # Th2 associated
+Vlngene <- c('Cxcr5','Cxcl13',"Il21") # Tfh associated
+Vlngene <- c('Ahr','Ccr4',"Ccl7",'Il13','Il22') # Th22 associated
+Vlngene <- c('Spi1','Il4ra',"Il9") # Th9 associated
+
+#Tr1 Reference paper: https://doi.org/10.1016/j.immuni.2018.12.001 Immunity
+Vlngene <- c('Itga2','Il10')  # Tr1 associated gene
+
+Vlngene <- c('Izumo1r','Nt5e') # Anergy marker:#FR4,#CD73
+Vlngene <- c('Il12a','Ebi3') # Il35
+
+```
+
+### 16. DEGs eye cluster vs naive baseline. VolcanoPlot (For Fig.3, see also Suppl table. 2)
+```{r clustercomparisons, message=FALSE, warning=FALSE}
+# Test umap plot
+DimPlot(eyenaive, reduction = "umap", label = TRUE, repel = TRUE)
+
+nfc1vsnaive = FindMarkers(eyenaive, ident.1=0, ident.2=2)
+write.table(nfc1vsnaive, file=paste(outputpath,"DEG_nfc1vsnaive.txt",sep=""), quote=F, sep = "\t")
+nfc1vsnaivefiltered=dplyr::filter(nfc1vsnaive, p_val_adj < 0.05 & (avg_log2FC > 1 | avg_log2FC < -1))
+nrow(nfc1vsnaivefiltered)
+nrow(nfc1vsnaive)
+write.table(nfc1vsnaivefiltered, file=paste(outputpath,"DEG_nfc1vsnaivefiltered.txt",sep=""), quote=F, sep = "\t")
+
+nfc2vsnaive = FindMarkers(eyenaive, ident.1=1, ident.2=2)
+write.table(nfc2vsnaive, file=paste(outputpath,"DEG_nfc2vsnaive.txt",sep=""), quote=F, sep = "\t")
+nfc2vsnaivefiltered=dplyr::filter(nfc2vsnaive, p_val_adj < 0.05 & (avg_log2FC > 1 | avg_log2FC < -1))
+write.table(nfc2vsnaivefiltered, file=paste(outputpath,"DEG_nfc2vsnaivefiltered.txt",sep=""), quote=F, sep = "\t")
+
+Tregvsnaive = FindMarkers(eyenaive, ident.1=3, ident.2=2)
+write.table(Tregvsnaive, file=paste(outputpath,"DEG_Tregvsnaive.txt",sep=""), quote=F, sep = "\t")
+Tregvsnaivefiltered=dplyr::filter(Tregvsnaive, p_val_adj < 0.05 & (avg_log2FC > 1 | avg_log2FC < -1))
+write.table(Tregvsnaivefiltered, file=paste(outputpath,"DEG_Tregvsnaivefiltered.txt",sep=""), quote=F, sep = "\t")
+
+prolifervsnaive = FindMarkers(eyenaive, ident.1=4, ident.2=2)
+write.table(prolifervsnaive, file=paste(outputpath,"DEG_prolifervsnaive.txt",sep=""), quote=F, sep = "\t")
+prolifervsnaivefiltered=dplyr::filter(prolifervsnaive, p_val_adj < 0.05 & (avg_log2FC > 1 | avg_log2FC < -1))
+write.table(prolifervsnaivefiltered, file=paste(outputpath,"DEG_prolifervsnaivefiltered.txt",sep=""), quote=F, sep = "\t")
+
+########################### 
+# Volcano plot
+# nfc1 vs naive
+Vnfc1vsnaive<-read.delim("DEG_nfc1vsnaive.txt",sep = "\t")
+pval_0 <- subset(Vnfc1vsnaive, Vnfc1vsnaive$p_val_adj == 0)
+# creating a random list of numbers around 1e-300. 
+pval_jitter <- round(rnorm(nrow(pval_0), mean =150, sd = 35),0) 
+pval_jitter <- 1*10^-pval_jitter
+# replace old p-values by new values
+pval_0$p_val_adj <- pval_jitter
+# creating a new data set for visualization 
+Vnfc1vsnaive <- subset(Vnfc1vsnaive,Vnfc1vsnaive$p_val_adj!=0)
+Vnfc1vsnaive <- rbind(Vnfc1vsnaive, pval_0)
+# Set custom colors and labels
+keyvals <- ifelse(
+  Vnfc1vsnaive$avg_log2FC < -1, 'dodgerblue3',
+  ifelse(Vnfc1vsnaive$avg_log2FC > 1, 'brown2',
+         'grey'))
+keyvals[is.na(keyvals)] <- 'grey'
+names(keyvals)[keyvals == 'brown2'] <- 'Upregulated'
+names(keyvals)[keyvals == 'grey'] <- 'Non-DEG'
+names(keyvals)[keyvals == 'dodgerblue3'] <- 'Downregulated'
+p1 <- EnhancedVolcano(Vnfc1vsnaive,rownames(Vnfc1vsnaive),
+                      x ="avg_log2FC", y ="p_val_adj",title = 'nfc1 vs naive',
+                      selectLab = c("Nrgn","Cblb","Nt5e","Nr4a1","Nr4a2","Nr4a3","Ctla4","Stat3","Tox",
+                         "Tgfb1","Maf","Lag3","Ikzf2","Foxp1","Sell","Pik3r5","Satb1","Pag1","S100a4","Cd200",
+                         "Nrp1","Tnfrsf4","Pdcd1","Ccl5","Tnfrsf1b", "Tcf7","Itgav","Itga4","Ccr7","Aff3","Il7r","Tox2"),
+             pCutoff = 10e-10,FCcutoff = 1,cutoffLineCol = 'darkgrey',vlineCol = 'darkgrey', pointSize = 1.0,
+             labSize = 3,vline= c(-0.25,0.25),
+             colCustom = keyvals,drawConnectors = TRUE,arrowheads = FALSE,
+             lengthConnectors = unit(3, 'npc'),legendIconSize = 0, widthConnectors = 0.5,max.overlaps=50)
+p2 <- p1 + ggplot2::coord_cartesian(xlim=c(-3, 3.5)) +
+  ggplot2::scale_x_continuous(breaks=seq(-3, 3.5,1))+
+  ggplot2::theme_bw()
+p2
+ggsave("fig3a-nfc1.pdf", plot = p2, width = 6, height = 4)
+
+```
+
+#### 17. SCENIC (pySCENIC)
+```{python pySCENIC, message=FALSE, warning=FALSE}
+### Prepare and load database for SCENIC
+mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather
+wget -c https://resources.aertslab.org/cistarget/motif2tf/motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl
+wget -c https://resources.aertslab.org/cistarget/tf_lists/allTFs_mm.txt
+
+##### Export matrix data from seurat object in R 
+write.csv(t(as.matrix(eyenaive@assays$RNA@counts)),file = "eyenaiveforSCENIC.csv")
+
+python3 -m pip install loompy
+python3 -m pip install numpy
+python3 -m pip install scanpy
+
+# python script, named as change.py
+cat >change.py
+#creat a new change.py
+import os,sys
+os.getcwd()
+os.listdir(os.getcwd()) 
+import loompy as lp;
+import numpy as np;
+import scanpy as sc;
+x=sc.read_csv("eyenaiveforSCENIC.csv");
+row_attrs = {"Gene": np.array(x.var_names),};
+col_attrs = {"CellID": np.array(x.obs_names)};
+lp.create("eyenaivescenic.loom",x.X.transpose(),row_attrs,col_attrs);
+
+#Back to file, execute the change.py
+python3 change.py
+
+## execute pySCENIC
+conda activate pyscenic
+
+# mice database #chaneg the path accordingly
+dir=/gpfs/gsfs10/users/CaspiRNAseqData/Results/SCENIC-figures/
+tfs=$dir/allTFs_mm.txt
+feather=$dir/mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather
+tbl=$dir/motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl
+
+input_loom=./eyenaivescenic.loom
+ls $tfs  $feather  $tbl  
+
+#2.1 grn
+pyscenic grn \
+--num_workers 10 \
+--output grn.eyenaivescenic.tsv \
+--method grnboost2 \
+eyenaivescenic.loom \
+$tfs 
+
+#2.2 cistarget
+pyscenic ctx \
+grn.eyenaivescenic.tsv $feather \
+--annotations_fname $tbl \
+--expression_mtx_fname $input_loom  \
+--mode "dask_multiprocessing" \
+--output ciseyenaivescenic.csv \
+--num_workers 12  \
+--mask_dropouts
+
+#2.3 AUCell
+pyscenic aucell \
+$input_loom \
+ciseyenaivescenic.csv \
+--output out_eyenaiveSCENIC.loom \
+--num_workers 10
+
+#(This step will create an ~11M out_SCENIC.loom file)
+# Next section is using this loom file as input for visualization
+```
+
+#### 17. SCENIC (visualize after pySCENIC in R)
+```{r scenic, message=FALSE, warning=FALSE}
+devtools::install_github('aertslab/SCopeLoomR')
+devtools::install_github("aertslab/SCENIC")
+BiocManager::install(c("AUCell", "RcisTarget","GENIE3"))
+library(SCopeLoomR)
+library(AUCell)
+library(SCENIC)
+library(dplyr)
+library(KernSmooth)
+library(plotly)
+library(BiocParallel)
+library(optparse)
+library(grid)
+library(data.table)
+library(patchwork)
+library(stringr)
+library(circlize)
+
+#### 1.Read out_SCENIC.loom 
+loom <- open_loom("/path/to/your/project/pySCENICoutput/out_eyenaiveSCENIC.loom") 
+regulons_incidMat <- get_regulons(loom, column.attr.name="Regulons")
+regulons_incidMat[1:4,1:4]  
+regulons <- regulonsToGeneLists(regulons_incidMat)
+regulonAUC <- get_regulons_AUC(loom,column.attr.name='RegulonsAUC')
+regulonAucThresholds <- get_regulon_thresholds(loom)
+tail(regulonAucThresholds[order(as.numeric(names(regulonAucThresholds)))])
+embeddings <- get_embeddings(loom)  
+close_loom(loom)
+
+rownames(regulonAUC)
+names(regulons)
+
+Idents(eyenaive) <- "eyenaive_annotation"
+DimPlot(eyenaive,reduction = "umap",label=T ) 
+## Assign sample types metadata column 
+eyenaive$eyenaive_annotation=recode(as.character(eyenaive$RNA_snn_res.0.2),
+                                            "0"="anergic1",
+                                            "1"="anergic2",
+                                            "2"="naiveT",
+                                            "3"="Treg",
+                                            "4"="Proliferative")
+
+##### 2. Regulon_scaled Heatmap
+sub_regulonAUC <- regulonAUC[,match(colnames(eyenaive),colnames(regulonAUC))]
+dim(sub_regulonAUC) #[1]  255 8115
+
+# Check
+identical(colnames(sub_regulonAUC), colnames(eyenaive))
+
+cellClusters <- data.frame(row.names = colnames(eyenaive), 
+                           seurat_clusters = as.character(eyenaive$eyenaive_annotation))
+cellTypes <- data.frame(row.names = colnames(eyenaive), 
+                        celltype = eyenaive$eyenaive_annotation)
+head(cellTypes)
+head(cellClusters)
+sub_regulonAUC[1:10,1:10] 
+head(sub_regulonAUC)
+
+head(eyenaive)
+selectedResolution <- "celltype" # select resolution
+cellsPerGroup <- split(rownames(cellTypes), 
+                       cellTypes[,selectedResolution])
+# remove extened regulons
+sub_regulonAUC <- sub_regulonAUC[onlyNonDuplicatedExtended(rownames(sub_regulonAUC)),] 
+dim(sub_regulonAUC)  ####[1]  255 8115
+# Calculate average expression:
+regulonActivity_byGroup <- sapply(cellsPerGroup,
+                                  function(cells) 
+                                    rowMeans(getAUC(sub_regulonAUC)[,cells]))
+# Scale expression. 
+regulonActivity_byGroup_Scaled <- t(scale(t(regulonActivity_byGroup),
+                                          center = T, scale=T)) 
+dim(regulonActivity_byGroup_Scaled)  #[1] 255.   5
+regulonActivity_byGroup_Scaled=na.omit(regulonActivity_byGroup_Scaled)
+write.csv(regulonActivity_byGroup_Scaled, file = "regulonActivity_byGroup_Scaled_eyenaive.csv")
+
+regulonActivity_byGroup_Scaled [1:5,1:5]
+
+### full list heat map of Regulon
+Heatmap(
+  regulonActivity_byGroup_Scaled,
+  name                         = "z-score",
+  col                          = colorRamp2(seq(from=-2,to=2,length=11),rev(brewer.pal(11, "RdBu"))),
+  show_row_names               = T,
+  show_column_names            = TRUE,
+  row_names_gp                 = gpar(fontsize = 4),
+  clustering_method_rows = "ward.D2",
+  clustering_method_columns = "ward.D2",
+  row_title_rot                = 0,
+  cluster_rows                 = TRUE,
+  cluster_row_slices           = TRUE,
+  cluster_columns              = TRUE)
+
+#### Selected Regulon Heatmap (Fig. 6B)
+Reguloneye = read.delim("/path/to/your/project/regulonActivity_byGroup_Scaled_eyenaive0928.txt",header = T,sep="\t",row.names = 1)
+View(Reguloneye)
+Heatmap(
+  Reguloneye,
+  name                         = "Regulon activity",
+  col                          = colorRampPalette(c( "steelblue3","white", "tomato3"))(200),
+  show_row_names               = T,
+  show_column_names            = TRUE,
+  row_names_gp                 = gpar(fontsize = 12),
+  clustering_method_rows = "ward.D2",
+  clustering_method_columns = "ward.D2",
+  row_title_rot                = 0,
+  cluster_rows                 = TRUE,
+  cluster_row_slices           = T,
+  cluster_columns              = T)
+
+##### 3. visualization in UMAP
+regulonsToPlot = c('Egr1(+)','Egr2(+)','Egr3(+)')
+regulonsToPlot %in% row.names(sub_regulonAUC)
+eyenaive@meta.data = cbind(eyenaive@meta.data ,t(assay(sub_regulonAUC[regulonsToPlot,])))
+
+DotPlot(eyenaive, features = unique(regulonsToPlot)) 
+library(scCustomize)
+FeaturePlot_scCustom(eyenaive,features = regulonsToPlot,colors_use = viridis_inferno_light_high)
+
+```
+
+#### 18. Monocle2 with R=0.2 
+```{r monocle2, message=FALSE, warning=FALSE}
+library(monocle)
+##subset eye cells.
+Idents(eyenaive) <- "RNA_snn_res.0.2"
+DimPlot(eyenaive,reduction = "umap",label=T ) 
+eyesubset <- subset(eyenaive, idents = c(0,1,3,4))
+
+DimPlot(eyesubset, reduction = "umap", label = T, repel = TRUE) 
+Idents(eyesubset) <- "RNA_snn_res.0.2"
+
+## Assign sample types metadata column 
+eyesubset$eye4subset_annotation=recode(as.character(eyesubset$RNA_snn_res.0.2),
+ "0"="anergic_quiet","1"="anergic_Il17","3"="Treg", "4"="proliferative") 
+Idents(eyesubset) <- "eye4subset_annotation"
+levels(eyesubset)
+
+expression_matrix4 = eyesubset@assays$RNA@counts 
+cell_metadata4 <- data.frame(group = eyesubset[['orig.ident']],clusters = Idents(eyesubset))
+gene_annotation4 <- data.frame(gene_short_name = rownames(expression_matrix4), stringsAsFactors = F) 
+rownames(gene_annotation4) <- rownames(expression_matrix4)
+pd4 <- new("AnnotatedDataFrame", data = cell_metadata4)
+fd4 <- new("AnnotatedDataFrame", data = gene_annotation4)
+HSMM4 <- newCellDataSet(expression_matrix4,
+                       phenoData = pd4,
+                       featureData = fd4,
+                       expressionFamily=negbinomial.size())
+###change based on https://github.com/cole-trapnell-lab/monocle-release/issues/419
+HSMM4 <- detectGenes(HSMM4,min_expr = 0.1)
+HSMM_myo4 <- estimateSizeFactors(HSMM4)   
+HSMM_myo4 <- estimateDispersions(HSMM_myo4) 
+
+disp_table <- dispersionTable(HSMM_myo4)
+disp.genes <- subset(disp_table, mean_expression >= 0.1 )
+disp.genes <- as.character(disp.genes$gene_id)
+
+# run in Biowulf
+head(HSMM4@phenoData@data)
+table(HSMM4@phenoData@data$clusters)
+###### DDRTree take time 
+HSMM_myo4 <- reduceDimension(HSMM_myo4, max_components = 2, method = 'DDRTree') 
+table(HSMM_myo4@phenoData@data$State)
+head(HSMM_myo4@phenoData@data)
+
+HSMM_myo4 <-orderCells(HSMM_myo4,reverse = T)
+
+#### Three Default trajectory plots. Pseudotime, State, Cluster. 
+plot1 <-plot_cell_trajectory(HSMM_myo4, color_by = "Pseudotime")
+plot2 <- plot_cell_trajectory(HSMM_myo4, color_by = "State")
+plot3 <- plot_cell_trajectory(HSMM_myo4, color_by = "clusters")
+
+plot_cell_trajectory(HSMM_myo4, color_by = "Pseudotime")
+plot1 <- plot_cell_trajectory(HSMM_myo4, color_by = "Pseudotime")+scale_color_gradientn(colours = c('#330066','#336699','#66CC66','#FFCC33'))
+plot3 <- plot_cell_trajectory(HSMM_myo4, color_by = "clusters")+scale_color_manual(values = c("#23acde", "#bfa708","#de6de8", "#22c981"))
+ggsave("monocle_eye4time.pdf", plot = plot1, width = 7, height = 7)
+
+### BEAM analysis (long time) 
+BEAM_res <- BEAM(HSMM_myo4, branch_point = 1, cores = 20, progenitor_method = "duplicate")
+BEAM_res <- BEAM_res[order(BEAM_res$qval),]
+BEAM_res <- BEAM_res[,c("gene_short_name", "pval", "qval")]
+head(BEAM_res)
+mycds_sub_beam <- HSMM_myo4[row.names(subset(BEAM_res, qval < 1e-30)),]
+
+plot_genes_branched_heatmap(mycds_sub_beam, branch_point = 1, num_clusters = 5, cores = 20,show_rownames = T)
+
+### BEAM gene list (double check the branch point, k= num_clusters 5 as test, depend on data)
+p30 <- plot_genes_branched_heatmap(mycds_sub_beam, branch_point = 1, return_heatmap=T,num_clusters =5, cores = 24,show_rownames = FALSE)
+p30$ph$tree_row
+clusters <- cutree(p30$ph$tree_row, k = 5)
+clustering <- data.frame(clusters)
+clustering[,1] <- as.character(clustering[,1])
+colnames(clustering) <- "Gene_Clusters"
+head(clustering)
+write.csv(clustering,'BEAMk5q_30.csv',row.names = T)
+
+##### Selected genes in the BEAM List to visualize 
+install.packages("igraph")
+
+pdf("kinetic_bidirection.pdf", width = 4, height = 6)
+kinetic_genes <- row.names(subset(fData(HSMM_myo4),
+          gene_short_name %in% c("Foxp3","Tcf7", "Tox2", "Nr4a3")))
+plot_genes_branched_pseudotime(HSMM_myo4[kinetic_genes,],
+                       branch_point = 1,color_by = "clusters",ncol = 1, cell_size=0.2,branch_labels = c("angery state","Treg state" )) +scale_color_manual(values = c("#23acde","#bfa708","#de6de8", "#22c981"))
+dev.off()
+```
+
+##### 19. RNA velocity analysis (integrate velocity vectors into Seurat object)
+```{r Velocyto R, message=FALSE, warning=FALSE}
+# run from the file "smb://hpcdrive.nih.gov/CaspiRNAseqData/velocyto/sample1_hto1" ,etc.
+install_github("velocyto-team/velocyto.R")
+library(velocyto.R)
+library(Seurat)
+library(SeuratWrappers)
+
+# Samples list
+samples=c("S1_HTO_1","S1_HTO_2","S1_HTO_3","S1_HTO_4","S3_HTO_1")
+# Read velocity files
+allsamplesvelocyto=list()
+# Run for each sample separately, change for range accordingly
+for(i in 1:4)
+{
+  print(i)
+  sampleid=paste("S1_HTO_",i,sep="")
+  print(sampleid)
+  filename=paste("/data/CaspiRNAseqData/velocyto/sample1_hto",i,"/sample_alignments.loom",sep="")
+  print(filename)
+  allsamplesvelocyto[[sampleid]] <- ReadVelocity(file = filename)
+}
+
+sampleid=paste("S3_HTO_1")
+print(sampleid)
+filename=paste("/data/CaspiRNAseqData/velocyto/sample3_hto1","/sample_alignments.loom",sep="")
+print(filename)
+allsamplesvelocyto[[sampleid]] <- ReadVelocity(file = filename)
+
+# Check to see if all samples are in
+names(allsamplesvelocyto)  #### Yes
+
+# create a new allsamplesS variable
+allsamplesS = list()
+# For renaming cells in seurat
+for(j in samples)
+{
+  # print current sample name
+  print(j)
+  toappend=paste("-",j,sep="")
+  for (i in names(x = allsamplesvelocyto[[j]])) 
+  {
+    ### Store assay in a new variable
+    assay <- allsamplesvelocyto[[j]][[i]]
+    ### Rename cell names in loom file to match cell names in Seurat object
+    #colnames(assay) <- gsub('Part of cell name to change', 'Changed part', colnames(assay))
+    colnames(assay) <- gsub("^sample_alignments_(.*?):","",colnames(assay))
+    colnames(assay) <- gsub("x",toappend,colnames(assay))
+    print(head(colnames(assay)))
+    
+    ### Integrate velocyto assay change to original
+    allsamplesvelocyto[[j]][[i]] = assay
+  }
+  allsamplesS[[j]]=as.Seurat(allsamplesvelocyto[[j]])
+  allsamplesS[[j]]$orig.ident = j
+  print(allsamplesS[[j]])
+}
+
+#allsamplevelocyto - original velocyto output with original names
+#allsampleS - velocyto converted to seurat with new cell names
+#s1hto1 - velocyto converted to seurat for one sample
+#allsamplesSall - seurat merged velocyto sample runs
+#allsamplesV - seurat object with GEX, original, without velocity
+
+# Merge velocyto only seurat samples for velocyto only velocity analysis
+# assign one sample to a variable 
+names(allsamplesS) #[1] "S1_HTO_1" "S1_HTO_2" "S1_HTO_3" "S1_HTO_4" "S3_HTO_1"
+s3hto1=allsamplesS$S3_HTO_1
+# remove that one sample from the group
+allsamplesS$S3_HTO_1 = NULL
+# check samples
+names(allsamplesS)
+# merge all samples
+allsamplesSall = merge(s3hto1, y=allsamplesS)   
+names(allsamplesSall) #[1] "spliced"   "unspliced" "ambiguous"
+head(allsamplesSall)
+
+# Normalize
+allsamplesSall = NormalizeData(allsamplesSall)
+# scale
+allsamplesSall = ScaleData(allsamplesSall)
+# PCA
+allsamplesSall = RunPCA(allsamplesSall, features = rownames(allsamplesSall))
+# Findneighbors
+allsamplesSall <- FindNeighbors(allsamplesSall, dims = 1:50)
+# Find clusters
+allsamplesSall <- FindClusters(allsamplesSall)
+# umap
+allsamplesSall <- RunUMAP(allsamplesSall, dims = 1:50)
+# Use previous gex general workflow prepped seurat data
+# Assign the gex seurat object from the general gex workflow output
+
+names(allsamplesSall) ## "spliced","unspliced","ambiguous","spliced_nn","spliced_snn", "pca","umap" 
+head(allsamplesSall)
+
+allsamplesV = allsamples  
+# how many cells match between gex and vel
+length(which(is.element(colnames(allsamplesSall), colnames(allsamplesV))))  ####[1] 8149
+# subset gex cells from vel
+vel <- allsamplesSall[rownames(allsamplesV), colnames(allsamplesV)]
+# gex integration
+vel_integrated <- vel
+# nearest neighbor graph
+vel_integrated@graphs[["RNA_nn"]] <- allsamplesV@graphs[["RNA_nn"]][colnames(vel),colnames(vel)]
+# cluster assignments
+vel_integrated <- AddMetaData(object = vel_integrated,
+                              metadata = FetchData(allsamplesV,vars = "RNA_snn_res.0.2",cells = colnames(vel)),
+                              col.name = "gex.clusters")
+# assign cluster identity
+Idents(vel_integrated) <- "gex.clusters"
+levels(vel_integrated)     #[1] "0" "1" "2" "3" "4" "5"
+
+######## subset eye-primed clusters
+vel_integrated_eye <- subset(x = vel_integrated, idents = c("0","2","3","4"))
+# format clusters as factors
+vel_integrated_eye$gex.clusters = factor(vel_integrated_eye$gex.clusters)
+# run umap. 
+vel_integrated_eye <- RunUMAP(vel_integrated_eye, dims = 1:50)
+# velocity using original gex, run velocity, using default parameters, with 60 cores
+# please refer https://rdrr.io/github/satijalab/seurat-wrappers/man/RunVelocity.html
+vel_integrated_eyeV <- RunVelocity(vel_integrated_eye,    
+                                   deltaT = 1,
+                                   kCells = 25,
+                                   fit.quantile = 0.02,
+                                   verbose = FALSE,
+                                   ncores = 60)
+# set colors and name cluster colors
+fourcolors <- c("#bfa708","#48c785","#33a7f5", "#d272ed")
+ident_colors <- fourcolors
+names(ident_colors) <- levels(vel_integrated_eyeV$gex.clusters)
+cell_colors <- ident_colors[vel_integrated_eyeV$gex.clusters]
+names(cell_colors) <- colnames(vel_integrated_eyeV)
+
+# generate velocity plot  Takes time
+# Draw velocity using its own umap data and standard parameters
+# For parameter details refer https://rdrr.io/github/velocyto-team/velocyto.R/man/show.velocity.on.embedding.cor.html
+pdf("velocity_eye_plot.pdf")
+show.velocity.on.embedding.cor(emb = Embeddings(vel_integrated_eyeV,reduction = "umap"),
+                               vel = Tool(vel_integrated_eyeV,slot = "RunVelocity"),
+                               n = 200,
+                               scale = "sqrt",
+                               xlab = colnames(Embeddings(vel_integrated_eyeV,reduction = "umap"))[1],
+                               ylab = colnames(Embeddings(vel_integrated_eyeV,reduction = "umap"))[2],
+                               cell.colors = ac(x = cell_colors, alpha = 0.5),
+                               cex = 0.8,
+                               arrow.scale = 3,
+                               show.grid.flow = TRUE,
+                               min.grid.cell.mass = 0.5,
+                               grid.n = 40,
+                               arrow.lwd = 1,
+                               do.par = FALSE,
+                               cell.border.alpha = 0.1,
+                               n.cores = 60) 
+dev.off()
+
+########## scVelo for latent time 
+# This workflow assumes you already are familiar with R based scrna-seq analysis and biowulf
+# Export Seurat object data, running the below code in R
+# save metadata table:
+eyelatentime <- eyecells
+eyelatentime$barcode <- colnames(eyelatentime)
+eyelatentime$UMAP_1 <- eyelatentime@reductions$umap@cell.embeddings[,1]
+eyelatentime$UMAP_2 <- eyelatentime@reductions$umap@cell.embeddings[,2]
+write.csv(eyelatentime@meta.data, file='eyelatentimemetadata.csv', quote=F, row.names=F)
+
+# write expression counts matrix
+library(Matrix)
+counts_matrix <- GetAssayData(eyelatentime, assay='RNA', slot='counts')
+writeMM(counts_matrix, file='eyelatentimecounts.mtx')    
+# write dimesnionality reduction matrix, in this example case pca matrix
+write.csv(eyelatentime@reductions$pca@cell.embeddings, file='eyelatentimepca.csv', quote=F, row.names=F)
+# write gene names
+write.table(data.frame('gene'=rownames(counts_matrix)),file='eyelatentimegene_names.csv',quote=F,row.names=F,col.names=F)
+```
+
+##### 19. RNA velocity analysis (latenttime)
+```{python scVelo, message=FALSE, warning=FALSE}
+# Below is the python code, run in python
+# Request for an interactive session in biowulf
+module load scvelo
+python
+import scanpy as sc
+import anndata
+from scipy import io
+from scipy.sparse import coo_matrix, csr_matrix
+import numpy as np
+import os
+import pandas as pd
+
+# load sparse matrix:
+X = io.mmread("eyelatentimecounts.mtx")
+# create anndata object
+adata = anndata.AnnData(
+  X=X.transpose().tocsr())
+# load cell metadata:
+cell_meta = pd.read_csv("eyelatentimemetadata.csv")
+# load gene names: 
+with open("eyelatentimegene_names.csv", 'r') as f:
+  gene_names = f.read().splitlines()
+# set anndata observations and index obs by barcodes, var by gene names
+adata.obs = cell_meta
+adata.obs.index = adata.obs['barcode']
+adata.var.index = gene_names
+# load dimensional reduction:
+pca = pd.read_csv("eyelatentimepca.csv")
+pca.index = adata.obs.index
+# set pca and umap
+adata.obsm['X_pca'] = pca.to_numpy()
+adata.obsm['X_umap'] = np.vstack((adata.obs['UMAP_1'].to_numpy(), adata.obs['UMAP_2'].to_numpy())).T
+# plot a UMAP colored by sampleID to test:
+sc.pl.umap(adata, color=['RNA_snn_res.0.2'], frameon=False, save=True)
+
+# save dataset as anndata format
+adata.write('my_dataeye.h5ad')
+
+# reload dataset
+adata = sc.read_h5ad('my_dataeye.h5ad')
+# import scvelo and other modules
+import scvelo as scv
+import scanpy as sc
+import numpy as np
+import pandas as pd
+import anndata as ad
+# analysis settings
+scv.settings.verbosity = 3
+scv.settings.set_figure_params('scvelo', facecolor='white', dpi=100, frameon=False)
+# load loom files for spliced/unspliced matrices for each sample:
+ldata_s1h1 = scv.read('/data/CaspiRNAseqData/Results/velocyto/sample1_hto1/sample_alignments.loom', cache=True)
+ldata_s1h2 = scv.read('/data/CaspiRNAseqData/Results/velocyto/sample1_hto2/sample_alignments.loom', cache=True)
+ldata_s1h3 = scv.read('/data/CaspiRNAseqData/Results/velocyto/sample1_hto3/sample_alignments.loom', cache=True)
+ldata_s1h4 = scv.read('/data/CaspiRNAseqData/Results/velocyto/sample1_hto4/sample_alignments.loom', cache=True)
+ldata_s3h1 = scv.read('/data/CaspiRNAseqData/Results/velocyto/sample3_hto1/sample_alignments.loom', cache=True)
+# preprocess barcodes to match seurat object
+testlist=ldata_s1h1.obs.index.tolist()
+testlist=[bc.split(':')[1] for bc in testlist]
+testlist=[bc.split('x')[0] for bc in testlist]
+barcodes = [sub + '-S1_HTO_1' for sub in testlist]
+ldata_s1h1.obs.index = barcodes
+testlist=ldata_s1h2.obs.index.tolist()
+testlist=[bc.split(':')[1] for bc in testlist]
+testlist=[bc.split('x')[0] for bc in testlist]
+barcodes = [sub + '-S1_HTO_2' for sub in testlist]
+ldata_s1h2.obs.index = barcodes
+testlist=ldata_s1h3.obs.index.tolist()
+testlist=[bc.split(':')[1] for bc in testlist]
+testlist=[bc.split('x')[0] for bc in testlist]
+barcodes = [sub + '-S1_HTO_3' for sub in testlist]
+ldata_s1h3.obs.index = barcodes
+testlist=ldata_s1h4.obs.index.tolist()
+testlist=[bc.split(':')[1] for bc in testlist]
+testlist=[bc.split('x')[0] for bc in testlist]
+barcodes = [sub + '-S1_HTO_4' for sub in testlist]
+ldata_s1h4.obs.index = barcodes
+testlist=ldata_s3h1.obs.index.tolist()
+testlist=[bc.split(':')[1] for bc in testlist]
+testlist=[bc.split('x')[0] for bc in testlist]
+barcodes = [sub + '-S3_HTO_1' for sub in testlist]
+ldata_s3h1.obs.index = barcodes
+
+# make variable names unique
+ldata_s3h1.var_names_make_unique()
+ldata_s1h1.var_names_make_unique()
+ldata_s1h2.var_names_make_unique()
+ldata_s1h3.var_names_make_unique()
+ldata_s1h4.var_names_make_unique()
+# concatenate the three loom
+ldatan= ldata_s1h1.concatenate([ldata_s1h2,ldata_s1h3, ldata_s1h4, ldata_s3h1])
+# cleanup names
+scv.utils.clean_obs_names(adata)
+scv.utils.clean_obs_names(ldatan)
+# merge matrices into the original adata object
+adata = scv.utils.merge(adata, ldatan)
+
+# plot umap to check
+sc.pl.umap(adata, color='RNA_snn_res.0.2', frameon=False, legend_loc='on data', title='', save='_0_20.pdf')
+# pre-process
+scv.pp.filter_and_normalize(adata)
+scv.pp.moments(adata)
+
+# compute velocity 
+scv.tl.velocity(adata, mode='stochastic')
+scv.tl.velocity_graph(adata)
+# visualization
+scv.pl.velocity_embedding_grid(adata, basis='umap', color='RNA_snn_res.0.2', save='embedding_grid.png', title='', scale=0.25,dpi = 300,
+                               palette={'0':'#bfa708','2':'#48c785','3':'#33a7f5','4':'#d272ed'})
+scv.pl.velocity_embedding_stream(adata, basis='umap', color='RNA_snn_res.0.2', save='embedding_stream0731.pdf', title='',dpi = 300,legend_loc='none',
+                                 palette={'0':'#bfa708','2':'#48c785','3':'#33a7f5','4':'#d272ed'})
+# latent time, takes time (overnight)
+scv.tl.recover_dynamics(adata) 
+
+#### 
+scv.tl.latent_time(adata)
+scv.pl.scatter(adata, color='latent_time', color_map='viridis', size=30, dpi = 300)
+scv.pl.scatter(adata, color='latent_time', color_map='viridis', size=40, save='latenteye.pdf')
+
+# save dataset as anndata format
+adata.write('my_data_lantenteye.h5ad')
+
+# Reference
+# https://smorabit.github.io/tutorials/8_velocyto/
+# https://www.10xgenomics.com/resources/analysis-guides/trajectory-analysis-using-10x-Genomics-single-cell-gene-expression-data
+# https://scvelo.readthedocs.io/en/stable/
+```
+
+```{r save, message=FALSE, warning=FALSE}
+# Save the modified R environment into a new RData filein the working directory
+save.image(file=paste(outputpath,"SeuratObject.RData",sep=""))
+
+sessionInfo()
+```
