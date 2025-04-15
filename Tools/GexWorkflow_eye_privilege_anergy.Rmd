@@ -21,7 +21,6 @@ library(tidyverse)
 library(HGNChelper)
 library(EnhancedVolcano)
 library(ComplexHeatmap) 
-library(monocle)
 library(patchwork)
 ```
 
